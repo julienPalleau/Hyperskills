@@ -65,15 +65,15 @@ S=2(ab+bc+ac)S = 2(ab + bc + ac)S=2(ab+bc+ac)
 Volume:
 V=abcV = abcV=abc
 """
-a = int(input())
-b = int(input())
-c = int(input())
-s = 4 * (a + b + c)
-S = 2 * (a * b + b * c + a * c)
-V = a * b * c
-print(s)
-print(S)
-print(V)
+# a = int(input())
+# b = int(input())
+# c = int(input())
+# s = 4 * (a + b + c)
+# S = 2 * (a * b + b * c + a * c)
+# V = a * b * c
+# print(s)
+# print(S)
+# print(V)
 
 ########################################################################################################################
 """
@@ -94,6 +94,85 @@ calculate the minimum number of desks to be purchased. To do so, you'll need the
     should be as many as possible desks taken by two students rather than one.
 
 Most probably, you'll need operations // and % in your program!
+"""
+# number_1 = int(input())
+# number_2 = int(input())
+# number_3 = int(input())
+# total = [number_1, number_2, number_3]
+# nb_desk = 0
+# for number in total:
+#     nb_desk += number // 2 + number % 2
+# print(nb_desk)
+
+########################################################################################################################
+"""
+Program with numbers
+Savings account
+
+For the given amount of money, calculate the income from this savings account with a 5% interest rate after one year.
+
+Here's the formula for calculating the income: income=amount×interest×years/100
+
+Save the result into the variable income. You DO NOT need to print it.
+"""
+# amount = 1000
+# interest_rate = 5
+# years = 1
+# # change the next line
+# income = 1000 * 5 * 1 / 100
+# print(income)
+
+########################################################################################################################
+"""
+Program with numbers
+Difference of times
+
+You will get the values for two moments in time of the same day: when Megan went for a walk, and when it started to 
+rain. It is known that the first event happened earlier than the second one. Find out how many seconds passed between 
+them.
+
+The program gets the input of six integers, each on a separate line. The first three integers represent hours, minutes, 
+and seconds of the first event, and the rest three integers define similarly the second event. Print the number of 
+econds between these two moments of time.
+"""
+# hours_first = int(input())
+# minutes_first = int(input())
+# seconds_first = int(input())
+# hours_second = int(input())
+# minutes_second = int(input())
+# seconds_second = int(input())
+#
+# print((hours_second - hours_first) * 3600 + (minutes_second - minutes_first) * 60 + (seconds_second - seconds_first))
+
+########################################################################################################################
+"""
+Program with numbers
+The sum of digits
+
+Given a three-digit integer (i.e., an integer from 100 to 999), find the sum of its digits and print the result.
+
+To get the separate digits of the input integer, make use of % and // (for example, you can get 8 from the number 508 
+by taking the remainder of the division by 10).
+"""
+# number = int(input())
+# result = []
+#
+# while number > 0:
+#     unit = number % 10
+#     number //= 10
+#     result.append(unit)
+#
+# print(sum(result))
+
+########################################################################################################################
+"""
+Program with numbers
+Divide nuts equally between squirrels
+
+N squirrels found K nuts and decided to divide them equally. Determine how many nuts each squirrel will get and print 
+the result.
+Input data format
+There are two positive numbers N and K, each of them is not greater than 10000.
 """
 
 
