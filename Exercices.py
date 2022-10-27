@@ -1,4 +1,103 @@
 ########################################################################################################################
+"""
+Calculate a remainder
+Write a program that calculates the remainder of 10 divided by 3 and prints the result.
+"""
+# print(10 / 3)
+# print(10 % 3)
+
+########################################################################################################################
+"""
+Knowledge verification: Multi-line programs
+
+Write the code that will print all days of the week on separate lines with an empty line between them. Make sure that 
+each day starts with a capital letter. Start it with Sunday.
+"""
+# print("Sunday")
+# print()
+# print("Monday")
+# print()
+# print("Tuesday")
+# print("")
+# print("Wednesday")
+# print("")
+# print("Thursday")
+# print("")
+# print("Friday")
+# print("")
+# print("Saturday")
+
+########################################################################################################################
+"""
+Program with numbers 
+The first digit of a two-digit number
+
+Write a program that takes a two-digit integer as an input and prints its first digit (i.e., the number of tens).
+"""
+# number = input()
+# print(int(number[0]))
+
+########################################################################################################################
+"""
+Program with numbers 
+Calculating an expression
+
+Write a program that reads an integer value n from the standard input and prints the result of the expression:
+((n + 1) * n + 2) * n + 3
+"""
+# n = int(input())
+# print(((n + 1) * n + 2) * n + 3)
+
+########################################################################################################################
+"""
+Program with numbers
+Calculating S V P
+
+Ask the user about parameters of a rectangular parallelepiped (3 integers representing the length, width, and height) 
+and print the sum of edge lengths, its total surface area, and the volume, one answer per line.
+
+Sum of lengths of all edges:
+s=4(a+b+c)s = 4(a + b + c)s=4(a+b+c)
+
+Surface area:
+S=2(ab+bc+ac)S = 2(ab + bc + ac)S=2(ab+bc+ac)
+
+Volume:
+V=abcV = abcV=abc
+"""
+a = int(input())
+b = int(input())
+c = int(input())
+s = 4 * (a + b + c)
+S = 2 * (a * b + b * c + a * c)
+V = a * b * c
+print(s)
+print(S)
+print(V)
+
+########################################################################################################################
+"""
+Program with numbers 
+Desks
+
+Wow! This problem is kind of tricky. If you're ready to put your thinking cap on, brace yourself and good luck! 
+Otherwise, you can skip it for now and return any time later.
+
+A school has decided to create three new math groups and equip three classrooms for them with new desks. Your task is to 
+calculate the minimum number of desks to be purchased. To do so, you'll need the following information:
+
+    The number of students in each of the three groups is known: your program will receive three non-negative integers 
+    as the input. It is possible that one or more of them will be zero, so you should take it into account.
+    Each group will sit in its own classroom. It means that you should calculate the number of desks for each classroom 
+    separately, and only then add them up!
+    At most two students may sit at any desk. You are expected to output the minimum number of desks to buy, so there 
+    should be as many as possible desks taken by two students rather than one.
+
+Most probably, you'll need operations // and % in your program!
+"""
+
+
+########################################################################################################################
 # n = int(input())
 # line_list = list(range(1, 2 * n, 2))  # create list of n odd numbers [1, 3, 5, etc.]
 # line_max = max(line_list)  # get max width in order to be centered
@@ -503,3 +602,52 @@ Carl asks you to count the sum of the first k natural numbers. Read k from the i
 and print your answer.
 """
 
+# k = int(input())
+# print(sum(range(0, k + 1)))
+
+########################################################################################################################
+"""
+While loop
+Half-life
+
+In nuclear physics, the half-life is used to describe the rate with which elements undergo radioactive decay. More 
+precisely, it is the time required for an element to reduce in half.
+
+Let's take an isotope of Radium (Ra) called radium-223. Its half-life is about 12 days: this means that every 12 days 
+the number of atoms reduces in half.
+
+Your program should:
+
+    read the initial and the final quantity of atoms from the input.
+    count how many complete half-life periods it would take for the initial number of atoms of radium-223 to become 
+    equal to or go below the final quantity. Note that the number of half-life periods should be an integer, not a float!
+    multiply the number of half-life periods by 12 to convert the number of half-life periods to days.
+    output the resulting number of days that it takes for the initial number of atoms to go below the final number.
+
+For example, the initial number of atoms is 4 and the resulting quantity is 3. After the first half-life period, the 
+initial number will reduce to 2 atoms, which is below 3. Then, we take the number of half-life periods that have passed 
+(1) and multiply it by the number of days that every half-life period takes (12). The output will be 12.
+The input format:
+
+The first line: the initial quantity of atoms (from 2 to 1,000,000).
+The second line: the final quantity of atoms.
+
+The output format:
+
+The number of days that it would take for radium-223 to go from the initial quantity of atoms to or below the final 
+quantity of atoms.
+An example:
+The initial quantity is 8, the final quantity is 3. Your program output should be number 24.
+"""
+########################################################################################################################
+
+# initial_quantity = int(input())
+# final_quantity = int(input())
+# half_period = 12
+# number_of_half_period = 0
+#
+# while initial_quantity >= final_quantity:
+#     number_of_half_period += 1
+#     initial_quantity -= int(initial_quantity / 2)
+#
+# print(number_of_half_period * 12)
