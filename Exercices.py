@@ -174,8 +174,54 @@ the result.
 Input data format
 There are two positive numbers N and K, each of them is not greater than 10000.
 """
+# N = int(input())
+# k = int(input())
+# print(k // N)
 
+########################################################################################################################
+"""
+Program with numbers
+How many nuts will be left after division
 
+Some squirrels found some nuts and decided to divide them equally. You will get the number of squirrels and the number 
+of nuts as input on separate lines. Find out how many nuts will be left after each of the squirrels takes an equal 
+number of nuts. Print the result.
+"""
+# N = int(input())
+# k = int(input())
+# print(k % N)
+
+########################################################################################################################
+"""
+Program with numbers
+The last digit of a number
+Write a program that reads an integer and outputs its last digit.
+"""
+# number = list(input())
+# print(number[-1])
+
+########################################################################################################################
+"""
+Program with numbers
+Good rest on vacation
+Write a program that will help people who are going on vacation. The program should calculate the total required sum 
+(e.g. $) of money to have a good rest for a given duration.
+
+There are four parameters that have to be considered:
+
+    duration in days
+    total food cost per day
+    one-way flight cost
+    cost of one night in a hotel (the number of nights is equal to the duration of days minus one)
+
+Read integer values of these parameters from the standard input and then print the result.
+"""
+duration_days = int(input())
+food_cost_per_day = int(input())
+flight_cost = int(input())  # one way
+hotel_cost = int(input())  # one night
+
+print(f"{duration_days * food_cost_per_day + (duration_days - 1) * hotel_cost + 2 * flight_cost}")
 ########################################################################################################################
 # n = int(input())
 # line_list = list(range(1, 2 * n, 2))  # create list of n odd numbers [1, 3, 5, etc.]
@@ -718,7 +764,6 @@ quantity of atoms.
 An example:
 The initial quantity is 8, the final quantity is 3. Your program output should be number 24.
 """
-########################################################################################################################
 
 # initial_quantity = int(input())
 # final_quantity = int(input())
@@ -730,3 +775,5 @@ The initial quantity is 8, the final quantity is 3. Your program output should b
 #     initial_quantity -= int(initial_quantity / 2)
 #
 # print(number_of_half_period * 12)
+
+########################################################################################################################
