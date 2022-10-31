@@ -412,6 +412,79 @@ words = ["apple", "it", "creek", "pelican", "subsequent", "horse", "apothecary"]
 
 ########################################################################################################################
 """
+List comprehension
+Boundary
+Write a program that divides numbers into two lists depending on whether they are greater than or less than 5. You don't
+ have to include number 5 itself.
+A sequence of numbers has been read from the input for you.
+# work with a list from this variable
+numbers = [int(n) for n in input()]
+
+# change the next two lines
+less_than_5 = ...
+greater_than_5 = ...
+
+# printing your results
+print(less_than_5)
+print(greater_than_5)
+"""
+# # work with a list from this variable
+# numbers = [int(n) for n in input().split()]
+#
+# # change the next two lines
+# less_than_5 = [number for number in numbers if number < 5]
+# greater_than_5 = [number for number in numbers if number > 5]
+#
+# # printing your results
+# print(less_than_5)
+# print(greater_than_5)
+
+########################################################################################################################
+"""
+List comprehension
+Even numbers
+
+Write a program that takes a list of numbers, creates another list of even numbers from the first list, and prints it.
+
+E.g. if my_numbers = [1, 2, 3, 4, 5], then your program should print the list [2, 4].
+
+# the following line reads the list from the input; do not modify it, please
+my_numbers = [int(x) for x in input().split(" ")]
+
+# work with the variable 'my_numbers'
+"""
+# # the following line reads the list from the input; do not modify it, please
+# my_numbers = [int(x) for x in input().split(" ")]
+#
+# # work with the variable 'my_numbers'
+# result = [number for number in my_numbers if number % 2 == 0]
+# print(result)
+
+########################################################################################################################
+"""
+List comprehension
+The mean
+
+Given a numeric sequence at the input, create a list in which each number will be a digit from this input string. Then 
+use this list to calculate the arithmetic mean, that is, the sum of all the digits divided by their total count.
+Don't forget to print your result.
+"""
+test = [float(i) for i in list(input())]
+print(sum(test) / len(test))
+
+
+########################################################################################################################
+"""
+List comprehension
+How many days?
+The list seconds is a list of numbers that represent seconds. Convert the number of seconds to full days and print the 
+list that contains these values. The number of full days should be an int value.
+seconds = [86400, 1028397, 8372891, 219983, 865779330, 3276993204380912]
+# create a list of days here
+"""
+
+########################################################################################################################
+"""
 What day is it?
 Read a date from the input given in one of the following formats: YYYY-MM-DD or YYY-MM-DD. Print the year, month and day
 on separate lines.
