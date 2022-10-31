@@ -216,18 +216,199 @@ There are four parameters that have to be considered:
 
 Read integer values of these parameters from the standard input and then print the result.
 """
-duration_days = int(input())
-food_cost_per_day = int(input())
-flight_cost = int(input())  # one way
-hotel_cost = int(input())  # one night
-
-print(f"{duration_days * food_cost_per_day + (duration_days - 1) * hotel_cost + 2 * flight_cost}")
+# duration_days = int(input())
+# food_cost_per_day = int(input())
+# flight_cost = int(input())  # one way
+# hotel_cost = int(input())  # one night
+#
+# print(f"{duration_days * food_cost_per_day + (duration_days - 1) * hotel_cost + 2 * flight_cost}")
 ########################################################################################################################
 # n = int(input())
 # line_list = list(range(1, 2 * n, 2))  # create list of n odd numbers [1, 3, 5, etc.]
 # line_max = max(line_list)  # get max width in order to be centered
 # for line in line_list:
 #     print(('#' * line).center(line_max))
+
+########################################################################################################################
+"""
+Invoking a function
+Young and beautiful
+
+Read the input three times. Each one contains the age of a person – Jack's, Alex's, and Lana's. Find the youngest one 
+among them and print this person's age.
+"""
+# jack_age = int(input())
+# alex_age = int(input())
+# lana_age = int(input())
+#
+# print(min(jack_age, alex_age, lana_age))
+
+########################################################################################################################
+"""
+Invoking a function
+Hello, world!
+
+The classical introductory exercise, slightly modified. Write a program that takes a string, writes it to the variable 
+name (this part of code is already written for you), and then prints "Hello, world! Hello, name". Note that there's a 
+space before the name.
+The variable name is already defined.
+"""
+# name = input()
+# print(f"Hello, world! Hello, {name}")
+
+########################################################################################################################
+"""
+Invoking a function
+Longest word
+
+Find the longest word in a pair and print its length.
+The variables word1 and word2 are defined for you.
+"""
+# mot1 = input()
+# mot2 = input()
+# print(max(len(mot1), len(mot2)))
+
+########################################################################################################################
+"""
+Create module
+Create module
+
+Below there is a custom Python module:
+
+# my_module.py
+
+name = "John"
+
+def printer(x):
+    print("Hello,", x)
+
+You have already imported this module into your code:
+
+import my_module
+
+Write a line of the code that will now call the function printer() on the name variable. Mind that both the variable 
+and the function are defined in my_module.py!
+"""
+# import my_module
+#
+# my_module.printer(my_module.name)
+
+########################################################################################################################
+"""
+Create module
+Function main()
+Let's say you need a module that:
+
+    stores a string variable n with the value "42".
+    defines a main() function that prints the value of n.
+    calls the main() function only if it is executed as a script.
+
+Put the lines of this module's code in the correct order and add indents. The first line of the program must be 
+n = "42". NB: Use the buttons on the left to add indentation (one click equals four spaces).
+"""
+# n = "42"
+#
+#
+# def main():
+#     print("N:", n)
+#
+#
+# if __name__ == "__main__":
+#     main()
+
+########################################################################################################################
+"""
+Errors
+Chaos
+Look at the code below and eliminate the chaos: the first line should print the resulting number of the calculation and 
+the second line should print the word mathematics.
+print("45/9 + 16*(5 + 8)")
+print(mathematics)
+"""
+# print(45/9 + 16*(5 + 8))
+# print("mathematics")
+
+########################################################################################################################
+"""
+Errors
+Locate a problem
+The code snippet below needs debugging. Examine it and write down the line number on which the compilation of code will stop.
+
+print( "The quick brown fox" )  # 1
+print()                         # 2
+print'jumps')                   # 3
+pint()                          # 4
+print( ' over the lazy dog  )   # 5
+
+answer: 3
+"""
+
+########################################################################################################################
+"""
+Errors
+Locate a problem
+I am = I'm
+I have = I've
+I will = I'll
+I had / would = I'd
+"""
+# print("I am = I'm")
+# print("I have = I've")
+# print("I will = I'll")
+# print("I had / would = I'd")
+
+########################################################################################################################
+"""
+Errors
+Locate a problem
+Take a look at the following code. Did we declare all variables correctly, according to Python's syntax? Try to fix all 
+mistakes, so that SyntaxError will not be raised during the initialization of these variables.
+hope = "I hope this is actually going to work'
+doubt = 'Do I need to double check all lines?'
+suggestion = "What if I write it in "double quotes"?
+"""
+# hope = "I hope this is actually going to work"
+# doubt = 'Do I need to double check all lines?'
+# suggestion = 'What if I write it in "double quotes"?'
+
+########################################################################################################################
+"""
+List comprehension
+Else comprehension
+# the following line reads the list from the input, do not modify it, please
+old_list = [int(num) for num in input().split()]
+
+binary_list = # your code here
+print(binary_list)
+"""
+# old_list = [int(num) for num in input().split()]
+# print(old_list)
+#
+# binary_list = [1 if i > 0 else 0 for i in old_list]
+# print(binary_list)
+
+########################################################################################################################
+"""
+List comprehension
+Plus one
+You are given a list of strings containing integer numbers. Print the list of their values increased by 1.
+E.g. if list_of_strings = ["36", "45", "99"], your program should print the list [37, 46, 100].
+The variable list_of_strings is already defined, you don't need to work with the input or define it again.
+"""
+# list_of_strings = [int(num) for num in input().split()]
+# print([int(i) + 1 for i in list_of_strings])
+
+########################################################################################################################
+"""
+List comprehension
+Length
+Given a list of words in the code below, create a list of lengths of those words and print it.
+words = ["apple", "it", "creek", "pelican", "subsequent", "horse", "apothecary"]
+"""
+# words = ["apple", "it", "creek", "pelican", "subsequent", "horse",
+#          "apothecary"]
+# list_of_length = [len(word) for word in words]
+# print(list_of_length)
 
 ########################################################################################################################
 """
