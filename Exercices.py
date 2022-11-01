@@ -469,18 +469,61 @@ Given a numeric sequence at the input, create a list in which each number will b
 use this list to calculate the arithmetic mean, that is, the sum of all the digits divided by their total count.
 Don't forget to print your result.
 """
-test = [float(i) for i in list(input())]
-print(sum(test) / len(test))
+# test = [float(i) for i in list(input())]
+# print(sum(test) / len(test))
 
 
 ########################################################################################################################
 """
 List comprehension
 How many days?
+
 The list seconds is a list of numbers that represent seconds. Convert the number of seconds to full days and print the 
 list that contains these values. The number of full days should be an int value.
 seconds = [86400, 1028397, 8372891, 219983, 865779330, 3276993204380912]
 # create a list of days here
+"""
+# seconds = [86400, 1028397, 8372891, 219983, 865779330, 3276993204380912]
+# nb_days = [second // (3600 * 24) for second in seconds]
+# print(nb_days)
+
+########################################################################################################################
+"""
+List comprehension
+Threefold
+
+Print a list of numbers from 1 to 1000 that can be divided by 3.
+"""
+# list_of_numbers = [print(x) for x in range(0, 1001) if x % 3 == 0]
+#
+# # or to get it validated
+# list_of_numbers = [x for x in range(1, 1001) if x % 3 == 0]
+# print(list_of_numbers)
+
+########################################################################################################################
+"""
+List comprehension
+Vowels
+
+Read a string from the input and print a list of vowels that belong to that string.
+All vowels are enlisted in a variable of the same name.
+
+vowels = 'aeiou'
+# create your list here
+"""
+vowels = 'aeiou'
+string = input()
+vowels_list = [letter for letter in string if letter in vowels]
+print(vowels_list)
+# create your list here
+
+########################################################################################################################
+"""
+List comprehension
+Odd numbers
+
+Read a string with digits from the input and convert each number to an integer. Create a list in which you should 
+include only odd digits. Finally, print what you'll get.
 """
 
 ########################################################################################################################
