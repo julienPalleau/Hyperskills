@@ -7,6 +7,8 @@ Write a program that calculates the remainder of 10 divided by 3 and prints the 
 # print(10 % 3)
 
 ########################################################################################################################
+from typing import List
+
 """
 Knowledge verification: Multi-line programs
 
@@ -511,11 +513,10 @@ All vowels are enlisted in a variable of the same name.
 vowels = 'aeiou'
 # create your list here
 """
-vowels = 'aeiou'
-string = input()
-vowels_list = [letter for letter in string if letter in vowels]
-print(vowels_list)
-# create your list here
+# vowels = 'aeiou'
+# string = input()
+# vowels_list = [letter for letter in string if letter in vowels]
+# print(vowels_list)
 
 ########################################################################################################################
 """
@@ -524,6 +525,26 @@ Odd numbers
 
 Read a string with digits from the input and convert each number to an integer. Create a list in which you should 
 include only odd digits. Finally, print what you'll get.
+
+Sample Input 1:
+87113420
+
+Sample Output 1:
+[7, 1, 1, 3]
+"""
+list_numbers = input()
+print([int(i) for i in list_numbers if int(i) % 2 == 1])
+
+########################################################################################################################
+"""
+List comprehension
+A list of words
+
+Write a program that takes a list with words, creates a new list of words that start with the letter "a" in the first 
+list, and prints it.
+Some words may begin with the capital A! Leave them in their original form in the resulting list.
+E.g. if words = ['apple', 'pear', 'banana', 'Ananas'], then your program should print the list ['apple', 'Ananas'].
+The list with words is already defined: you can access it using the variable words.
 """
 
 ########################################################################################################################
