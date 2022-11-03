@@ -532,8 +532,8 @@ Sample Input 1:
 Sample Output 1:
 [7, 1, 1, 3]
 """
-list_numbers = input()
-print([int(i) for i in list_numbers if int(i) % 2 == 1])
+# list_numbers = input()
+# print([int(i) for i in list_numbers if int(i) % 2 == 1])
 
 ########################################################################################################################
 """
@@ -546,6 +546,228 @@ Some words may begin with the capital A! Leave them in their original form in th
 E.g. if words = ['apple', 'pear', 'banana', 'Ananas'], then your program should print the list ['apple', 'Ananas'].
 The list with words is already defined: you can access it using the variable words.
 """
+# words = ['apple', 'pear', 'banana', 'Ananas']
+# words = [word for word in words if word.startswith("a") or word.startswith("A")]
+# print(words)
+
+########################################################################################################################
+"""
+List comprehension
+Running total
+
+Given a numeric sequence, create a list in which each number will be a digit from this input string. Then use this list 
+to calculate the running total, or cumulative sum. Essentially, it's a new list of partial sums that gets updated every 
+time a new element appears.
+For example, we can transform the list [1, 2, 3] to [1, 1 + 2, 1 + 2 + 3], which equals to [1, 3, 6].
+"""
+# Solution 1
+# prior python 3.8
+
+
+# list_numbers = list(input())
+# list_beta = [int(number) for number in list_numbers]
+# j = 0
+# result=[]
+# for i in list_beta:
+#     i += j
+#     j = i
+#     result.append(i)
+#
+# print(result)
+
+
+# Solution 2
+# works only for python 3.8 and above
+# list_numbers = list(input())
+# result = 0
+# print([result := result + int(list_numbers[i]) for i in range(len(list_numbers))])
+
+# Solution 3
+# numbers = [int(x) for x in list(input())]
+# new_list = [sum(numbers[:i + 1]) for i, x in enumerate(numbers)]
+# print(new_list)
+
+# Rappel
+# test = [0, 1, 2, 3, 4, 5]
+# print(test[:6])
+
+########################################################################################################################
+"""
+Any and all
+Prime numbers
+
+In math, we call a natural number prime if it's greater than 1 and can be divided without any remainder only by 1 and 
+itself:
+2, 3, 5, 7, 11, 13, 17, ...
+Create a list of all prime numbers up to 1000 in the code below. Just save this list into a variable prime_numbers, 
+you don't have to print anything.
+Make use of any() or all() to check if a number n leaves a zero remainder when divided by values from 2 to n - 1 
+(inclusively).
+"""
+# prime_numbers = [n for n in range(2, 1001) if all(n % x for x in range(2, n))]
+# print(prime_numbers)
+
+########################################################################################################################
+"""
+Any and all
+Competition
+
+Today you are taking part in the chess competition. The winner of the competition will get the 'winner' status and the 
+largest amount of money if they win all the games. Much is at stake!
+The results are stored in a list. Fill the blanks in the code below and figure out how much money you won.
+You DON'T need to print the answer.
+check = ...([True, True, 1, 1, True])
+
+if ...:
+    status = 'winner'
+else:
+    status = 'loser'
+
+if status == ...:
+    winning_sum = 100
+else:
+    winning_sum = 10
+"""
+# check = all([True, True, 1, 1, True])
+#
+# if check:
+#     status = 'winner'
+# else:
+#     status = 'loser'
+# print(status)
+#
+# if status == 'winner':
+#     winning_sum = 100
+# else:
+#     winning_sum = 10
+# print(winning_sum)
+
+########################################################################################################################
+"""
+Any and all
+Heads or Tails
+
+We have tossed a coin 6 times and saved the results in a list called heads_or_tails. The values are integers: 1 stands 
+for a head, while 0 denotes a tail.
+Add some code to find out whether the list has any heads. Do not print the variable check, just store the result in it.
+# Fingers crossed
+check =  # are there any heads in the list heads_or_tails?
+"""
+# heads_or_tails = [0, 0, 0 ,0, 0, 0, 0, 0]
+# check = any(heads_or_tails)
+# print(check)
+
+########################################################################################################################
+"""
+Any and all
+Lottery
+
+Imagine that you have bought a bunch of lottery tickets and wrote down their numbers into the list. Now, it's time to 
+figure out whether you have a winning ticket.
+You know that all winning tickets are no less than 44. Fill the empty fields in the code (these ones ...) to check if 
+you have at least one winning ticket.
+You DON'T need to print the answer.
+# As luck would have it
+tickets = [11, 22, 33, 44, 55]
+winning_tickets = [i >= ... for i in ...]
+tickets_bool = ...(winning_tickets)
+"""
+# # As luck would have it
+# tickets = [11, 22, 33, 44, 55]
+# winning_tickets = [i >= 44 for i in tickets]
+# tickets_bool = any(winning_tickets)
+# print(tickets_bool)
+# print(any("the object"))
+
+########################################################################################################################
+"""
+Exception handling
+Implementing logic
+
+Advanced input() handling is used to read input directly into several variables, e. g.,
+name, surname = input().split(), but a user still can enter more or fewer words.
+In this task, you have to make sure that the user entered the necessary amount of words and...
+    If there are more or fewer words in the input, print an error: "You need to enter exactly 2 words. Try again!"
+    If everything's good, greet the user personally.
+"""
+# try:
+#     name, surname = input().split()
+# except Exception:
+#     print("You need to enter exactly 2 words. Try again!")
+# else:
+#     print(f"Welcome to our party, {name} {surname}")
+
+########################################################################################################################
+"""
+Exception handling
+Zero
+
+You know how to catch the built-in exceptions. Right now, try to read two numbers (a, b) and find the result of their 
+division. Your main task it to catch the ZeroDivisionError. If there's an error, print the following message: 
+The Error!. Otherwise, print the result of the division.
+a = int(input())
+b = int(input())
+"""
+# a = int(input())
+# b = int(input())
+#
+# try:
+#     print(a / b)
+# except ZeroDivisionError:
+#     print("The Error!")
+
+########################################################################################################################
+"""
+Exception handling
+Chatty bot
+The original exercise consist in re-ordering the code below:
+finally:
+print("Hope to see you soon!")
+print("What a beautiful name you have!")
+except NameError:
+try:
+print("Hello, stranger!")
+print("Hello,, name")
+
+"""
+# try:
+#     print("Hello,, name")
+# except NameError:
+#     print("Hello, stranger!")
+# else:
+#     print("What a beautiful name you have!")
+# finally:
+#     print("Hope to see you soon!")
+
+########################################################################################################################
+"""
+Exception handling
+Modeling situation
+
+Your program will have access to the exception_test() function, which can throw exceptions.
+You need to write code that runs this function, then catches ArithmeticError, AssertionError, ZeroDivisionError 
+exceptions and prints the name of the caught exception. Mind the hierarchy of exceptions.
+An example solution that you should send for review:
+try:
+    exception_test()
+except Exception:
+    print("Exception")
+except BaseException:
+    print("BaseException")
+"""
+def exception_test():
+    return 3/0
+
+try:
+    exception_test()
+except ZeroDivisionError:
+    print("ZeroDivisionError")
+except ArithmeticError:
+    print("ArithmeticError")
+except AssertionError:
+    print("AssertionError")
+
+
 
 ########################################################################################################################
 """
@@ -558,6 +780,7 @@ on separate lines.
 # print(year)
 # print(month)
 # print(day)
+
 ########################################################################################################################
 """
 Find positions
