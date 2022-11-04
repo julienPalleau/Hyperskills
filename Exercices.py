@@ -12,7 +12,7 @@ from typing import List
 """
 Knowledge verification: Multi-line programs
 
-Write the code that will print all days of the week on separate lines with an empty line between them. Make sure that 
+Write the code that will print all days of the week on separate lines with an empty line between them. Make sure that
 each day starts with a capital letter. Start it with Sunday.
 """
 # print("Sunday")
@@ -31,7 +31,7 @@ each day starts with a capital letter. Start it with Sunday.
 
 ########################################################################################################################
 """
-Program with numbers 
+Program with numbers
 The first digit of a two-digit number
 
 Write a program that takes a two-digit integer as an input and prints its first digit (i.e., the number of tens).
@@ -41,7 +41,7 @@ Write a program that takes a two-digit integer as an input and prints its first 
 
 ########################################################################################################################
 """
-Program with numbers 
+Program with numbers
 Calculating an expression
 
 Write a program that reads an integer value n from the standard input and prints the result of the expression:
@@ -55,7 +55,7 @@ Write a program that reads an integer value n from the standard input and prints
 Program with numbers
 Calculating S V P
 
-Ask the user about parameters of a rectangular parallelepiped (3 integers representing the length, width, and height) 
+Ask the user about parameters of a rectangular parallelepiped (3 integers representing the length, width, and height)
 and print the sum of edge lengths, its total surface area, and the volume, one answer per line.
 
 Sum of lengths of all edges:
@@ -79,20 +79,20 @@ V=abcV = abcV=abc
 
 ########################################################################################################################
 """
-Program with numbers 
+Program with numbers
 Desks
 
-Wow! This problem is kind of tricky. If you're ready to put your thinking cap on, brace yourself and good luck! 
+Wow! This problem is kind of tricky. If you're ready to put your thinking cap on, brace yourself and good luck!
 Otherwise, you can skip it for now and return any time later.
 
-A school has decided to create three new math groups and equip three classrooms for them with new desks. Your task is to 
+A school has decided to create three new math groups and equip three classrooms for them with new desks. Your task is to
 calculate the minimum number of desks to be purchased. To do so, you'll need the following information:
 
-    The number of students in each of the three groups is known: your program will receive three non-negative integers 
+    The number of students in each of the three groups is known: your program will receive three non-negative integers
     as the input. It is possible that one or more of them will be zero, so you should take it into account.
-    Each group will sit in its own classroom. It means that you should calculate the number of desks for each classroom 
+    Each group will sit in its own classroom. It means that you should calculate the number of desks for each classroom
     separately, and only then add them up!
-    At most two students may sit at any desk. You are expected to output the minimum number of desks to buy, so there 
+    At most two students may sit at any desk. You are expected to output the minimum number of desks to buy, so there
     should be as many as possible desks taken by two students rather than one.
 
 Most probably, you'll need operations // and % in your program!
@@ -129,12 +129,12 @@ Save the result into the variable income. You DO NOT need to print it.
 Program with numbers
 Difference of times
 
-You will get the values for two moments in time of the same day: when Megan went for a walk, and when it started to 
+You will get the values for two moments in time of the same day: when Megan went for a walk, and when it started to
 rain. It is known that the first event happened earlier than the second one. Find out how many seconds passed between 
 them.
 
-The program gets the input of six integers, each on a separate line. The first three integers represent hours, minutes, 
-and seconds of the first event, and the rest three integers define similarly the second event. Print the number of 
+The program gets the input of six integers, each on a separate line. The first three integers represent hours, minutes,
+and seconds of the first event, and the rest three integers define similarly the second event. Print the number of
 econds between these two moments of time.
 """
 # hours_first = int(input())
@@ -153,7 +153,7 @@ The sum of digits
 
 Given a three-digit integer (i.e., an integer from 100 to 999), find the sum of its digits and print the result.
 
-To get the separate digits of the input integer, make use of % and // (for example, you can get 8 from the number 508 
+To get the separate digits of the input integer, make use of % and // (for example, you can get 8 from the number 508
 by taking the remainder of the division by 10).
 """
 # number = int(input())
@@ -185,8 +185,8 @@ There are two positive numbers N and K, each of them is not greater than 10000.
 Program with numbers
 How many nuts will be left after division
 
-Some squirrels found some nuts and decided to divide them equally. You will get the number of squirrels and the number 
-of nuts as input on separate lines. Find out how many nuts will be left after each of the squirrels takes an equal 
+Some squirrels found some nuts and decided to divide them equally. You will get the number of squirrels and the number
+of nuts as input on separate lines. Find out how many nuts will be left after each of the squirrels takes an equal
 number of nuts. Print the result.
 """
 # N = int(input())
@@ -206,7 +206,7 @@ Write a program that reads an integer and outputs its last digit.
 """
 Program with numbers
 Good rest on vacation
-Write a program that will help people who are going on vacation. The program should calculate the total required sum 
+Write a program that will help people who are going on vacation. The program should calculate the total required sum
 (e.g. $) of money to have a good rest for a given duration.
 
 There are four parameters that have to be considered:
@@ -233,10 +233,93 @@ Read integer values of these parameters from the standard input and then print t
 
 ########################################################################################################################
 """
+Basic string methods
+All in one 
+"""
+# n = 1
+# 'robot'.replace('o', '_', n)  # Replaces n first occurrences of an old substring with a new one.
+# "".replace("", 'robot')  # Inserts a substring into the empty line.
+# 'robot'.replace('o', "")  # Removes substrings from the line.
+# 'robot'.replace("", " ")  # Adds spacing between letters.
+
+########################################################################################################################
+"""
+Basic string methods
+Default
+What will be removed using str.lstrip([chars]), str.rstrip([chars]) and str.strip([chars]) methods, if chars is not 
+specified?
+"""
+chars = "test"
+print('civic'.strip('vci'))
+
+########################################################################################################################
+"""
+Basic string methods
+Poster artist
+Imagine that you design film posters for a living. Write a program that prints each film title in all caps.
+"""
+# for title in ["the lion king", "MaTRiX"]:
+#     print(title.upper())
+
+########################################################################################################################
+"""
+Basic string methods
+Changing the string
+
+Timmy is learning two languages at the same time: English and Python. His teacher told him to work with the following 
+string: "London is the capital of Great Britain." Help Timmy! What will be the value of sentence after all the 
+operations in the code below?
+
+sentence = "London is the capital of Great Britain."
+sentence = sentence.lower()
+sentence.upper()
+sentence = sentence.replace("a", "x", 2)
+sentence.capitalize()
+>> london is the cxpitxl of great britain.
+"""
+
+########################################################################################################################
+"""
+Basic string methods
+Markdown parsing
+
+Markdown is a special syntax used for text formatting. There are several ways to emphasize words using Markdown:
+Typeface 	        Example
+Italic text 	    *italics*, _same italics_
+Bold text 	        **bold**, __same bold__
+Strikethrough text 	~~crossed out~~
+Code snippet 	    `code`
+
+Read an input and parse the text so that it doesn't include special symbols mentioned in the table ("*_~`") at its beginning and its end.
+Pay attention to the `code` example, ` is not the same as '!
+
+Do not forget to print the result.
+"""
+# txt = input()
+# fixed_txt = txt.strip("*_~`")
+# print(fixed_txt)
+
+########################################################################################################################
+"""
+Basic string methods
+Solve a case
+capitalize()    "Elementary, my dear watson"
+title()         "Elementary, My Dear Watson"
+swapcase()      "eLEMENTARY, MY DEAR wATSON"
+"""
+
+########################################################################################################################
+"""
+Basic string methods
+Preprocessing
+"""
+
+########################################################################################################################
+"""
 Invoking a function
 Young and beautiful
 
-Read the input three times. Each one contains the age of a person – Jack's, Alex's, and Lana's. Find the youngest one 
+Read the input three times. Each one contains the age of a person – Jack's, Alex's, and Lana's. Find the youngest one
 among them and print this person's age.
 """
 # jack_age = int(input())
@@ -250,8 +333,8 @@ among them and print this person's age.
 Invoking a function
 Hello, world!
 
-The classical introductory exercise, slightly modified. Write a program that takes a string, writes it to the variable 
-name (this part of code is already written for you), and then prints "Hello, world! Hello, name". Note that there's a 
+The classical introductory exercise, slightly modified. Write a program that takes a string, writes it to the variable
+name (this part of code is already written for you), and then prints "Hello, world! Hello, name". Note that there's a
 space before the name.
 The variable name is already defined.
 """
@@ -288,7 +371,7 @@ You have already imported this module into your code:
 
 import my_module
 
-Write a line of the code that will now call the function printer() on the name variable. Mind that both the variable 
+Write a line of the code that will now call the function printer() on the name variable. Mind that both the variable
 and the function are defined in my_module.py!
 """
 # import my_module
@@ -305,7 +388,7 @@ Let's say you need a module that:
     defines a main() function that prints the value of n.
     calls the main() function only if it is executed as a script.
 
-Put the lines of this module's code in the correct order and add indents. The first line of the program must be 
+Put the lines of this module's code in the correct order and add indents. The first line of the program must be
 n = "42". NB: Use the buttons on the left to add indentation (one click equals four spaces).
 """
 # n = "42"
@@ -322,7 +405,7 @@ n = "42". NB: Use the buttons on the left to add indentation (one click equals f
 """
 Errors
 Chaos
-Look at the code below and eliminate the chaos: the first line should print the resulting number of the calculation and 
+Look at the code below and eliminate the chaos: the first line should print the resulting number of the calculation and
 the second line should print the word mathematics.
 print("45/9 + 16*(5 + 8)")
 print(mathematics)
@@ -363,7 +446,7 @@ I had / would = I'd
 """
 Errors
 Locate a problem
-Take a look at the following code. Did we declare all variables correctly, according to Python's syntax? Try to fix all 
+Take a look at the following code. Did we declare all variables correctly, according to Python's syntax? Try to fix all
 mistakes, so that SyntaxError will not be raised during the initialization of these variables.
 hope = "I hope this is actually going to work'
 doubt = 'Do I need to double check all lines?'
@@ -467,7 +550,7 @@ my_numbers = [int(x) for x in input().split(" ")]
 List comprehension
 The mean
 
-Given a numeric sequence at the input, create a list in which each number will be a digit from this input string. Then 
+Given a numeric sequence at the input, create a list in which each number will be a digit from this input string. Then
 use this list to calculate the arithmetic mean, that is, the sum of all the digits divided by their total count.
 Don't forget to print your result.
 """
@@ -523,7 +606,7 @@ vowels = 'aeiou'
 List comprehension
 Odd numbers
 
-Read a string with digits from the input and convert each number to an integer. Create a list in which you should 
+Read a string with digits from the input and convert each number to an integer. Create a list in which you should
 include only odd digits. Finally, print what you'll get.
 
 Sample Input 1:
@@ -540,7 +623,7 @@ Sample Output 1:
 List comprehension
 A list of words
 
-Write a program that takes a list with words, creates a new list of words that start with the letter "a" in the first 
+Write a program that takes a list with words, creates a new list of words that start with the letter "a" in the first
 list, and prints it.
 Some words may begin with the capital A! Leave them in their original form in the resulting list.
 E.g. if words = ['apple', 'pear', 'banana', 'Ananas'], then your program should print the list ['apple', 'Ananas'].
@@ -555,8 +638,8 @@ The list with words is already defined: you can access it using the variable wor
 List comprehension
 Running total
 
-Given a numeric sequence, create a list in which each number will be a digit from this input string. Then use this list 
-to calculate the running total, or cumulative sum. Essentially, it's a new list of partial sums that gets updated every 
+Given a numeric sequence, create a list in which each number will be a digit from this input string. Then use this list
+to calculate the running total, or cumulative sum. Essentially, it's a new list of partial sums that gets updated every
 time a new element appears.
 For example, we can transform the list [1, 2, 3] to [1, 1 + 2, 1 + 2 + 3], which equals to [1, 3, 6].
 """
@@ -596,12 +679,12 @@ For example, we can transform the list [1, 2, 3] to [1, 1 + 2, 1 + 2 + 3], which
 Any and all
 Prime numbers
 
-In math, we call a natural number prime if it's greater than 1 and can be divided without any remainder only by 1 and 
+In math, we call a natural number prime if it's greater than 1 and can be divided without any remainder only by 1 and
 itself:
 2, 3, 5, 7, 11, 13, 17, ...
-Create a list of all prime numbers up to 1000 in the code below. Just save this list into a variable prime_numbers, 
+Create a list of all prime numbers up to 1000 in the code below. Just save this list into a variable prime_numbers,
 you don't have to print anything.
-Make use of any() or all() to check if a number n leaves a zero remainder when divided by values from 2 to n - 1 
+Make use of any() or all() to check if a number n leaves a zero remainder when divided by values from 2 to n - 1
 (inclusively).
 """
 # prime_numbers = [n for n in range(2, 1001) if all(n % x for x in range(2, n))]
@@ -612,7 +695,7 @@ Make use of any() or all() to check if a number n leaves a zero remainder when d
 Any and all
 Competition
 
-Today you are taking part in the chess competition. The winner of the competition will get the 'winner' status and the 
+Today you are taking part in the chess competition. The winner of the competition will get the 'winner' status and the
 largest amount of money if they win all the games. Much is at stake!
 The results are stored in a list. Fill the blanks in the code below and figure out how much money you won.
 You DON'T need to print the answer.
@@ -647,7 +730,7 @@ else:
 Any and all
 Heads or Tails
 
-We have tossed a coin 6 times and saved the results in a list called heads_or_tails. The values are integers: 1 stands 
+We have tossed a coin 6 times and saved the results in a list called heads_or_tails. The values are integers: 1 stands
 for a head, while 0 denotes a tail.
 Add some code to find out whether the list has any heads. Do not print the variable check, just store the result in it.
 # Fingers crossed
@@ -662,7 +745,7 @@ check =  # are there any heads in the list heads_or_tails?
 Any and all
 Lottery
 
-Imagine that you have bought a bunch of lottery tickets and wrote down their numbers into the list. Now, it's time to 
+Imagine that you have bought a bunch of lottery tickets and wrote down their numbers into the list. Now, it's time to
 figure out whether you have a winning ticket.
 You know that all winning tickets are no less than 44. Fill the empty fields in the code (these ones ...) to check if 
 you have at least one winning ticket.
@@ -702,8 +785,8 @@ In this task, you have to make sure that the user entered the necessary amount o
 Exception handling
 Zero
 
-You know how to catch the built-in exceptions. Right now, try to read two numbers (a, b) and find the result of their 
-division. Your main task it to catch the ZeroDivisionError. If there's an error, print the following message: 
+You know how to catch the built-in exceptions. Right now, try to read two numbers (a, b) and find the result of their
+division. Your main task it to catch the ZeroDivisionError. If there's an error, print the following message:
 The Error!. Otherwise, print the result of the division.
 a = int(input())
 b = int(input())
@@ -745,7 +828,7 @@ Exception handling
 Modeling situation
 
 Your program will have access to the exception_test() function, which can throw exceptions.
-You need to write code that runs this function, then catches ArithmeticError, AssertionError, ZeroDivisionError 
+You need to write code that runs this function, then catches ArithmeticError, AssertionError, ZeroDivisionError
 exceptions and prints the name of the caught exception. Mind the hierarchy of exceptions.
 An example solution that you should send for review:
 try:
@@ -755,18 +838,19 @@ except Exception:
 except BaseException:
     print("BaseException")
 """
-def exception_test():
-    return 3/0
 
-try:
-    exception_test()
-except ZeroDivisionError:
-    print("ZeroDivisionError")
-except ArithmeticError:
-    print("ArithmeticError")
-except AssertionError:
-    print("AssertionError")
-
+# def exception_test():
+#     return 3 / 0
+#
+#
+# try:
+#     exception_test()
+# except ZeroDivisionError:
+#     print("ZeroDivisionError")
+# except ArithmeticError:
+#     print("ArithmeticError")
+# except AssertionError:
+#     print("AssertionError")
 
 ########################################################################################################################
 """
@@ -785,7 +869,7 @@ on separate lines.
 Find positions
 Write a program that reads a sequence of numbers from the first line and the number x from the second line. Then it 
 should output all positions of x in the numerical sequence.
-The position count starts from 0. In case x is not in the sequence, print the line "not found" (quotes omitted, 
+The position count starts from 0. In case x is not in the sequence, print the line "not found" (quotes omitted,
 lowercased).
 Positions should be displayed in one line, in ascending order of the value.
 """
@@ -850,7 +934,7 @@ To format the decimal places use the round(number, places) function.
 """
 - Split and join -
 Flip
-Let's try to reverse a numeric sequence. Read it from the input and print its numbers in reverse order separated by 
+Let's try to reverse a numeric sequence. Read it from the input and print its numbers in reverse order separated by
 spaces.
 """
 # # solution 1
@@ -1299,7 +1383,7 @@ The second line: the final quantity of atoms.
 
 The output format:
 
-The number of days that it would take for radium-223 to go from the initial quantity of atoms to or below the final 
+The number of days that it would take for radium-223 to go from the initial quantity of atoms to or below the final
 quantity of atoms.
 An example:
 The initial quantity is 8, the final quantity is 3. Your program output should be number 24.
