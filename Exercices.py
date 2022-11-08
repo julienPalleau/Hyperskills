@@ -303,6 +303,9 @@ Do not forget to print the result.
 """
 Basic string methods
 Solve a case
+
+Some of the methods we have learned result in similar strings. Match their outputs for the phrase 
+"Elementary, my dear Watson".
 capitalize()    "Elementary, my dear watson"
 title()         "Elementary, My Dear Watson"
 swapcase()      "eLEMENTARY, MY DEAR wATSON"
@@ -312,7 +315,62 @@ swapcase()      "eLEMENTARY, MY DEAR wATSON"
 """
 Basic string methods
 Preprocessing
+
+Preprocess an input text:
+
+    delete punctuation symbols (commas, periods, exclamation and question marks ,.!?),
+    convert all symbols to lowercase.
+
+Then print your text.
+
+Punctuation marks appear not only at the end of the input string. You can use the following way to remove the 
+punctuation marks: str.replace("!", ""). Replacing a symbol with an empty string is the same as removing it.
 """
+# txt = input()
+# print(txt.replace("!", "").replace("?", "").replace(",", "").replace(".", "").lower())
+
+########################################################################################################################
+"""
+Basic string methods
+Latin equivalents
+Imagine you have a text-processing program that doesn't work with the ASCII characters. Still, you need to use it and 
+don't have time to correct that issue. You've decided to write another program that will replace all the letters with 
+ligatures and diacritic marks with their equivalents from the Latin alphabet. The list of replacements is the following:
+
+é -> e
+ë -> e
+á -> a
+å -> aa
+œ -> oe
+æ -> ae
+
+Complete the code below so that the function normalize (def is a keyword used to declare functions) would take a string 
+with diacritics and return the one where all of them have been replaced with the equivalents.
+name = input()
+
+def normalize(name):
+
+    # put your code here
+
+    return new_name
+
+print(normalize(name))
+"""
+
+# def normalize(name):
+#     new_name = ""
+#     elemts = {"é": "e", "ë": "e", "á": "a", "å": "aa", "œ": "oe", "æ": "ae"}
+#     for n, x in enumerate(name):
+#         if x in elemts:
+#             new_name += elemts.get(x)
+#         else:
+#             new_name += x
+#
+#     return new_name
+#
+#
+# print(normalize("Charlotte Brontë et Lætitia"))
+
 
 ########################################################################################################################
 """
@@ -803,6 +861,7 @@ b = int(input())
 """
 Exception handling
 Chatty bot
+
 The original exercise consist in re-ordering the code below:
 finally:
 print("Hope to see you soon!")
@@ -853,20 +912,11 @@ except BaseException:
 #     print("AssertionError")
 
 ########################################################################################################################
-"""
-What day is it?
-Read a date from the input given in one of the following formats: YYYY-MM-DD or YYY-MM-DD. Print the year, month and day
-on separate lines.
-"""
-# date = input()
-# year, month, day = date.split("-")
-# print(year)
-# print(month)
-# print(day)
 
-########################################################################################################################
 """
+Split and join
 Find positions
+
 Write a program that reads a sequence of numbers from the first line and the number x from the second line. Then it 
 should output all positions of x in the numerical sequence.
 The position count starts from 0. In case x is not in the sequence, print the line "not found" (quotes omitted,
@@ -894,8 +944,60 @@ Positions should be displayed in one line, in ascending order of the value.
 
 ########################################################################################################################
 """
+Split and join 
+Triangle 
+
+Draw a triangle of a given height, as in the example.
+ Sample Input 1:
+3
+
+Sample Output 1:
+  #  
+ ### 
+#####
+"""
+# # Solution 1:
+# number = int(input())
+# element = "#"
+# for i in range(number+2):
+#     if i % 2 == 1:
+#         print((element * i).center(number+2))
+
+# Solution 2:
+# height = int(input())
+# width = height + (height - 1)
+# block = "#"
+#
+# for _ in range(height):
+#     print(block.center(width))
+#     block += "##"
+
+########################################################################################################################
+"""
+Split and join
+What day is It?
+
+Read a date from the input given in one of the following formats: YYYY-MM-DD or YYY-MM-DD. Print the year, month and 
+day on separate lines.
+ Sample Input 1:
+
+2020-04-30
+
+Sample Output 1:
+
+2020
+04
+30
+"""
+# date = input()
+# print("\n".join(date.split("-")))
+
+
+########################################################################################################################
+"""
 - Split and join -
 String tricks
+
 Examine the code and fix the mistakes so that the join() method works.
 random_numbers = [1, 22, 333, 4444, 55555]
 print("\n".join(random_numbers))
@@ -907,6 +1009,7 @@ print("\n".join(random_numbers))
 """
 - Split and join -
 Prepositional genitive
+
 Advanced input() handling is used to read input directly into several variables, for example:
 x, y = input().split()
 """
@@ -927,8 +1030,7 @@ To format the decimal places use the round(number, places) function.
 """
 # notes = input()
 # notes = notes.split()
-# print(len(notes))
-# print(round(notes.count("A")/len(notes), 2))
+# print(round(notes.count("A") / len(notes), 2))
 
 ########################################################################################################################
 """
@@ -960,7 +1062,7 @@ After such words there will be no punctuation marks, you do not need to worry ab
 #     if word[-1] == "s":
 #         result += word + "_"
 #
-# print(result[:len(result)-1:])
+# print(result[:len(result) - 1:])
 #
 # # Solution 2
 # sentence = input().split()
@@ -991,7 +1093,7 @@ Print this text stylized as mixedCase, that is, the first word should be in lowe
 #     i += 1
 # print(result)
 #
-# # Solution 2
+# Solution 2
 # word = input().title().split()
 # word[0] = word[0].lower()
 # print("".join(word))
@@ -1080,6 +1182,132 @@ The name written in the CapWords fashion.
 # for word in result:
 #     res += word.capitalize()
 # print(res)
+
+########################################################################################################################
+"""
+The Shutil module
+Which error? 
+Suppose you are trying to move a directory to another folder. However, you are getting an error because the directory 
+you are moving is in the target folder. What error will be raised?
+Select one option from the list
+FileNotFoundError
+FileExistsError
+KeyError
+>>> shutil.Error
+"""
+# Python program to explain shutil.copytree() method
+
+# importing os module
+import os
+
+# importing shutil module
+import shutil
+
+# path
+path = 'C:/Users/MOTTIER LUCIE/Documents/GitHub/Hyperskills'
+
+# List files and directories
+# in 'C:/Users / Rajnish / Desktop / GeeksforGeeks'
+print("Before copying file:")
+print(os.listdir(path))
+
+# Source path
+src = 'C:/Users/MOTTIER LUCIE/Documents/GitHub/Hyperskills/source'
+print("Within source path:")
+print(os.listdir(src))
+#
+# Destination path
+dest = 'C:/Users/MOTTIER LUCIE/Documents/GitHub/Hyperskills/destination'
+print("Within destination path:")
+print(os.listdir(dest))
+#
+# # Copy the content of
+# # source to destination
+destination = shutil.copytree(src, dest, dirs_exist_ok=True)
+print("After copying file:")
+print(os.listdir(dest))
+#
+# # Print path of newly
+# # created file
+# print("Destination path:", destination)
+
+########################################################################################################################
+"""
+The Shutil module
+Matching functions 
+
+shutil.copy()           Copies the content of the file to the destination file or directory
+shutil.rmtree()         Delete a directory
+shutil.move()           Moves a file or directory to the destination
+shutil.make_archive()   Compress a file in the given format
+shutil.which()          Finds the path to the executable file
+"""
+
+########################################################################################################################
+"""
+The Shutil module
+How to keep the metadata?
+
+Sam wants to copy a file on his computer. He wants to keep the metadata. Which function would you advise to use?
+shutil.copy()
+x shutil.copy2()
+shutil.copyfile()
+shutil.which()
+
+"""
+
+########################################################################################################################
+"""
+The Shutil module
+Find an executable file 
+
+Recently, you have decided to learn C++ and downloaded it to your computer. You want to make sure the file has been 
+downloaded successfully. In the text field, write the function that will find the location of C++. You do not need to 
+print the result.
+"""
+# print(shutil.which("python"))
+
+########################################################################################################################
+"""
+The Shutil module
+Be in order
+
+To organize the folders, the football folder needs to be copied into the sports folder. We keep the path of the 
+football directory in the path_football variable; the sports directory in the path_sports variable. Which function 
+can help us with this operation? In the text field, state the required function.
+"""
+# shutil.copytree(path_football, path_sports)
+
+########################################################################################################################
+"""
+The Shutil module
+File compression 
+
+You need to compress the letters file. Its location is stored in the path variable. How do we perform the compression 
+operation? Use comp_letters for the new name of the file and any standard type of archive. Don't save it into a 
+variable, just type the command to create such an archive.
+"""
+import shutil
+
+directory = "/home/user/Desktop/Algorithms"
+shutil.make_archive("comp_letters", "bztar", path)
+
+########################################################################################################################
+"""
+Glob module
+Help a friend
+
+Your friend is a language teacher that has the my_dir directory with all kinds of files. Help him find all txt files 
+which have a1, a2 or b1 in their names. Use the glob module for that and take a look at what your friend has written:
+glob.glob('my_dir\\*[a-c]1*.txt')
+There's a mistake in this search. Which files does it return?
+Select one or more options from the list
+x   my_dir\\excercises b1.txt
+    my_dir\\some b2 texts.txt
+x   my_dir\\new c1 materials.txt
+    my_dir\\a2 texts.txt
+x   my_dir\\a1_texts.txt
+"""
 
 ########################################################################################################################
 """
