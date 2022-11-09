@@ -1195,41 +1195,41 @@ FileExistsError
 KeyError
 >>> shutil.Error
 """
-# Python program to explain shutil.copytree() method
-
-# importing os module
-import os
-
-# importing shutil module
-import shutil
-
-# path
-path = 'C:/Users/MOTTIER LUCIE/Documents/GitHub/Hyperskills'
-
-# List files and directories
-# in 'C:/Users / Rajnish / Desktop / GeeksforGeeks'
-print("Before copying file:")
-print(os.listdir(path))
-
-# Source path
-src = 'C:/Users/MOTTIER LUCIE/Documents/GitHub/Hyperskills/source'
-print("Within source path:")
-print(os.listdir(src))
+# # Python program to explain shutil.copytree() method
 #
-# Destination path
-dest = 'C:/Users/MOTTIER LUCIE/Documents/GitHub/Hyperskills/destination'
-print("Within destination path:")
-print(os.listdir(dest))
+# # importing os module
+# import os
 #
-# # Copy the content of
-# # source to destination
-destination = shutil.copytree(src, dest, dirs_exist_ok=True)
-print("After copying file:")
-print(os.listdir(dest))
+# # importing shutil module
+# import shutil
 #
-# # Print path of newly
-# # created file
-# print("Destination path:", destination)
+# # path
+# path = 'C:/Users/MOTTIER LUCIE/Documents/GitHub/Hyperskills'
+#
+# # List files and directories
+# # in 'C:/Users / Rajnish / Desktop / GeeksforGeeks'
+# print("Before copying file:")
+# print(os.listdir(path))
+#
+# # Source path
+# src = 'C:/Users/MOTTIER LUCIE/Documents/GitHub/Hyperskills/source'
+# print("Within source path:")
+# print(os.listdir(src))
+# #
+# # Destination path
+# dest = 'C:/Users/MOTTIER LUCIE/Documents/GitHub/Hyperskills/destination'
+# print("Within destination path:")
+# print(os.listdir(dest))
+# #
+# # # Copy the content of
+# # # source to destination
+# destination = shutil.copytree(src, dest, dirs_exist_ok=True)
+# print("After copying file:")
+# print(os.listdir(dest))
+# #
+# # # Print path of newly
+# # # created file
+# # print("Destination path:", destination)
 
 ########################################################################################################################
 """
@@ -1287,12 +1287,14 @@ You need to compress the letters file. Its location is stored in the path variab
 operation? Use comp_letters for the new name of the file and any standard type of archive. Don't save it into a 
 variable, just type the command to create such an archive.
 """
-import shutil
-
-directory = "/home/user/Desktop/Algorithms"
-shutil.make_archive("comp_letters", "bztar", path)
+# import shutil
+#
+# directory = "/home/user/Desktop/Algorithms"
+# shutil.make_archive("comp_letters", "bztar", path)
 
 ########################################################################################################################
+import glob
+
 """
 Glob module
 Help a friend
@@ -1307,6 +1309,115 @@ x   my_dir\\excercises b1.txt
 x   my_dir\\new c1 materials.txt
     my_dir\\a2 texts.txt
 x   my_dir\\a1_texts.txt
+"""
+
+########################################################################################################################
+"""
+https://docs.python.org/3/howto/regex.html
+Glob module
+How to open all.txt files?
+
+Imagine you have a folder with files in it. Some of them have the txt extension, and others have the HTML extension. 
+Write a program that allows you to find the ones which have the txt-extension. Sort them in alphabetical order and 
+print the final list.
+
+You can use the sorted(your_list_name) function for sorting. Consider that you are already inside the directory.
+"""
+# import os
+#
+# print(os.getcwd())
+# print(glob.glob('*'))
+# print(glob.glob('[__ a-z]*'))
+
+########################################################################################################################
+"""
+Glob module
+Wildcard meanings
+
+Let's refresh our memory about what wildcards mean. Match them to their meanings.
+*           Matches 0 or more characters.
+?           Matches only 1 character.
+[ - ]       Specifies a range of characters.
+[ ]         Matches 1 character from the given sequence.
+[! ]        Matches any character not in the provided sequence.
+"""
+
+########################################################################################################################
+"""
+Glob module
+Simple pathnames
+Let's match pathnames to the files they will match in the glob.glob() method.
+
+glob.glob('my_dir\\*.txt')      All .txt files.   
+glob.glob('my_dir\\?.*')        Filenames that consist of one character.
+glob.glob('my_dir\\?.txt')      .txt files with one character names.
+glob.glob('my_dir\\?')          Subdirectories with one character names.
+"""
+# import os
+#
+# print(os.getcwd())
+# print(glob.glob('?.*'))
+
+########################################################################################################################
+"""
+Glob module
+2014 — 2018 reports
+Let's say you have some txt files with reports in my_dir. Their names are report_2012.txt, report_2013.txt and so on, 
+all the way up to 2021. You need to find the reports from 2014 to 2018. Which of the following lines of code could 
+you use to do that? 
+
+    glob.glob('my_dir\\report_20[12-19].txt')
+    glob.glob('my_dir\\report_201?.txt')
+    glob.glob('my_dir\\report_*.txt')
+x   glob.glob('my_dir\\report_201[4-8].txt')
+"""
+
+########################################################################################################################
+"""
+Glob module
+iglob
+What does glob.iglob() return? 
+x   A generator.
+    A dictionary.
+    A string.
+    A list.
+"""
+
+########################################################################################################################
+"""
+Glob module
+Recursive flag 
+What does the following method return?
+glob.glob('my_dir\\**', recursive=True)
+
+    A list of all files inside subdirectories.
+    A list of subdirectories.
+x   A list of all files, subdirectories, and files inside the subdirectories.
+    A list of all files and subdirectories.
+"""
+
+########################################################################################################################
+"""
+Glob module
+Advanced pathnames
+Match search patterns to what you will find.
+
+glob.glob('my_dir\\b*[!bf].*')  Filenames starting with b but not ending with b or f.
+glob.glob('my_dir\\[bf]*.*')    Filenames starting with either b or f.
+glob.glob('my_dir\\[b-f]*.*')   Filenames starting with b, c, d, e or f.
+glob.glob('my_dir\\*[!b]')      Subdirectories with names which do not end in b.
+"""
+
+########################################################################################################################
+"""
+Glob module
+A generator
+Let's say you want to create a generator yielding the names of all csv files in my_dir and print them. Put the lines of 
+code in the correct order. Don't forget about the indentation.
+    import glob
+    generator = glob.iglob("my_dir\\*.csv")
+    for item in generator:
+    print(item)
 """
 
 ########################################################################################################################
