@@ -9,6 +9,8 @@ Write a program that calculates the remainder of 10 divided by 3 and prints the 
 ########################################################################################################################
 from typing import List
 
+import openpyxl
+
 """
 Knowledge verification: Multi-line programs
 
@@ -1418,6 +1420,185 @@ code in the correct order. Don't forget about the indentation.
     generator = glob.iglob("my_dir\\*.csv")
     for item in generator:
     print(item)
+"""
+
+########################################################################################################################
+"""
+Openpyxl
+Theory
+"""
+# # First steps
+# from openpyxl import Workbook
+# book = Workbook()
+# new_sheet = book.active
+# print(type(new_sheet))
+#
+# new_sheet['A1'] = 'cat'
+# new_sheet['A2'] = 'dog'
+# new_sheet['A3'] = 'tiger'
+# new_sheet['A4'] = 'hamster'
+# new_sheet.cell(row=5, column=1).value = 'sparow'
+#
+# book.save("New_file.xlsx")
+#
+# # Opening a file to read/write it
+# workbook = openpyxl.load_workbook('New_file.xlsx')
+#
+# # Reading Files
+# all_sheets_names = workbook.sheetnames
+# sheet = workbook[all_sheets_names[0]]
+# print(sheet['A1'].value)
+# print(sheet['A2'].value)
+# print(sheet['A3'].value)
+# print(sheet['A4'].value)
+# print(sheet['A5'].value)
+#
+# # Writting to a file
+# workbook.create_sheet(title='for_testing')
+# write_sheet = workbook['for_testing']
+#
+# write_sheet['A1'] = 'Tom'
+# write_sheet['B1'] = 'Black'
+# write_sheet['C1'] = 'The Hague'
+# write_sheet['D1'] = 'We will discuss later'
+# write_sheet['E1'] = 5
+#
+# # Reading Files
+# sheet = workbook['for_testing']
+# print(sheet['A1'].value)
+# print(sheet['B1'].value)
+# print(sheet['C1'].value)
+# print(sheet['D1'].value)
+# print(sheet['E1'].value)
+#
+# # Filtering entries
+# print()
+# workbook = openpyxl.load_workbook('sample-xls-file-for-testing.xlsx')
+#
+# sheet = workbook['Sheet1']
+#
+# rows = sheet.max_row
+# cols = sheet.max_column
+# print(f"Number max rows: {rows}, columns: {cols}")
+#
+# # To print all entries
+# print()
+# # for row in range(1, rows + 1):
+# #     string = ''
+# #     for column in range(1, cols +1):
+# #         value = sheet.cell(row=row, column=column).value
+# #         string = string + str(value) + ', '
+# #     string = string[:-2]  # we remove the last appended comma and space
+# #     print(string)
+#
+# # Let's take a step further and print only those entries that contain Germany:
+# for row in range(1, rows + 1):
+#     string = ''
+#     for column in range(1, cols + 1):
+#         value = sheet.cell(row=row, column=column).value
+#         string = string + str(value) + ', '
+#     string = string[:-2]
+#     check = sheet.cell(row=row, column=2)
+#     check = str(check.value)
+#     if check == 'Germany':
+#         print(string)
+
+########################################################################################################################
+"""
+Openpyxl
+Creating a file
+
+You need to create a new Excel file and write down the name of your new classmate. You have the code but, 
+unfortunately, the lines are scrambled! Place them in the right order. 
+from openpyxl import Workbook
+new_book = Workbook()
+new_sheet = new_book.active
+new_sheet['A1'] = 'Giuliana'
+new_book.save("The_name_of_my_friend.xlsx")
+"""
+
+########################################################################################################################
+"""
+Openpyxl
+Opening a file 
+
+    workbook.loading_workbook()
+    workbook.upload_workbook()
+    workbook.download_workbook()
+X   workbook.load_workbook()
+"""
+
+########################################################################################################################
+"""
+Openpyxl
+How to process?
+
+If our Excel file contains thousands of data entries to be processed, we can use if-statements and 
+____________ together.
+X   for-loops
+    nothing more
+    functions
+    other libraries
+"""
+
+########################################################################################################################
+"""
+Openpyxl
+Maximum rows
+
+You are the owner of a big company. There is a very big file with tons of information about your customers on your 
+computer. You need to find out the maximum number of rows in an existing file. What attributes can be used for that?
+
+sheet.max_row
+"""
+
+########################################################################################################################
+"""
+Openpyxl
+Line description
+
+Match each line with what it does.
+from openpyxl import Workbook   We import the Workbook class.
+book = Workbook()               We save a new Workbook in a variable.
+new_sheet = book.active         We create a working environment.
+"""
+
+########################################################################################################################
+"""
+Openpyxl
+Variable type
+
+You created a new sheet. This sheet was stored in a variable. What is the type of this variable?
+X   <class 'openpyxl.worksheet.worksheet.Worksheet'>
+    <class 'openpyxl.workbook.workbook.Workbook'>
+    <class 'openpyxl.workbook.Workbook'>
+    <class 'openpyxl.worksheet.Worksheet'>
+"""
+
+########################################################################################################################
+"""
+Openpyxl
+Writing to a cell
+
+Imagine that you have created a program that writes down city names to an Excel file. One of the code lines reads the 
+following: sheet_one.cell(row=3, column=1).value = 'La Habana'. Use the shorter notation and rewrite the line to save 
+the city in the same cell.
+
+sheet_one['A3'] = 'La Habana'
+"""
+
+########################################################################################################################
+"""
+Openpyxl
+Other libraries
+
+In this topic, we asked you to have a look at other libraries that can be alternatives for openpyxl on the special page.
+Please, choose all the right alternatives below.
+X   xlsxwriter
+X   xlrd
+    xltw
+    pylightlx
+X   pyxlsb
 """
 
 ########################################################################################################################
