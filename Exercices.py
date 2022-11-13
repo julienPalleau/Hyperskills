@@ -1603,6 +1603,466 @@ X   pyxlsb
 
 ########################################################################################################################
 """
+Working with PDF in Python
+Extract the metadata
+
+We can extract the metadata from PDF files using the pdf.getDocumentInfo() method. Suppose we store the metadata in the 
+information variable. Let's explore the Author, Producer, and Title from dummy.pdf.
+
+# get the author, producer and title from the 'information' dict
+print(information.author)
+print(information.producer)
+print(information.title)
+"""
+
+########################################################################################################################
+"""
+Working with PDF in Python
+Add pages to PDF
+
+Suppose you want to create a new pdf file and add a lot of cells. Let's organize the following lines!
+Remember that first of all, you need a page. After that, you need to set a font before writing in the document.
+"""
+# from fpdf import FPDF
+#
+# pdf = FPDF(orientation="P", unit="mm", format="Letter")
+# pdf.add_page()
+# pdf.set_font(family="times", style="I", size=10)
+#
+# for i in range(5):
+#     pdf.cell(w=0, h=20, txt=f"This is the line {i}", border=0, ln=1, align="L")
+#
+# pdf.output("file.pdf")
+
+########################################################################################################################
+"""
+Working with PDF in Python
+Create a small PDF file
+
+Suppose you want to create a new PDF document in the landscape mode, with mm units and the A4 format. Use the FPDF 
+class to write an object called dummy_pdf with the mentioned attributes. Please, follow the described order and use 
+double quotation marks.
+"""
+# from fpdf import FPDF, XPos, YPos
+#
+# dummy_pdf = FPDF(orientation="L", unit="mm", format="A4")
+# dummy_pdf.add_page()
+# dummy_pdf.set_font(family='times', style='I', size=14)
+# dummy_pdf.cell(w=1, txt="hello world!")
+# dummy_pdf.output("dummy.pdf")
+
+########################################################################################################################
+"""
+Working with PDF in Python
+Rotate a page
+
+We can rotate pages in a PDF using the library PyPDF4. Select all valid methods to rotate pages:
+X   rotateClockwise(degrees)
+    rotateLeftClockwise(degrees)
+    rotate_pages_left(degrees)
+X   rotateCounterClockwise(degrees)
+    rotate_pages_right(degrees)
+"""
+
+########################################################################################################################
+"""
+Working with PDF in Python
+Create a PDF file
+
+Organize the following lines to create a sample PDF document. Remember that before printing text or a cell, it is 
+mandatory to select a font, otherwise, the document would be invalid. 
+
+from fpdf import FPDF
+pdf = FPDF()
+pdf.add_page()
+pdf.set_font('times', 'B', 16)
+pdf.cell(40, 10, 'This is my first document')
+pdf.output('dummy.pdf')
+"""
+
+########################################################################################################################
+"""
+Working with PDF in Python
+PDF functions
+
+Match the code lines with their function:
+Read a PDF file                         PdfFileReader()
+Get the number of pages                 getNumPages()
+Write a PDF file                        PdfFileWriter()
+Create a new PDF file                   FPDF("P", "cm", "Letter")
+Extract the metadata from a PDF file    getDocumentInfo()
+Add a new page                          add_page()
+"""
+
+########################################################################################################################
+"""
+Working with PDF in Python
+Extract the metadata
+
+What is the function of the PdfFileReader class that allows you to extract the metadata from a PDF file?
+    getMetaData()
+    extract_metadata()
+X   getDocumentInfo()
+    get_document_info()
+
+"""
+
+########################################################################################################################
+"""
+Working with PDF in Python
+Add the markdown
+
+Fpdf2 supports basic Markdown-like styling: **bold**, __italics__, --underlined--. We only need add an optional 
+markdown=True parameter to the cell method.
+Let's organize the following lines to add some markdown to a sample cell.
+
+from fpdf import FPDF
+pdf = fpdf.FPDF()
+pdf.add_page()
+pdf.set_font("Times", size=60)
+pdf.cell(txt="**Hello** __word__ --python--", markdown=True)
+pdf.output("sample.pdf")
+"""
+
+########################################################################################################################
+"""
+Working with PDF in Python
+Add HTML to a PDF file 
+
+The fpdf2 library supports basic rendering from HTML. Explore its documentation and select the method used to compose 
+basic HTML on a page.
+
+    set_format()
+X   write_html()
+    writeHtml()
+    set_html()
+"""
+
+########################################################################################################################
+"""
+Files in Python
+Which one?
+
+What mode should be used for updating a file (reading and writing)? It should be one symbol, not a combination.
+>> +
+"""
+
+########################################################################################################################
+"""
+Files in Python
+Missing
+
+Below you can see a code snippet for working with a file. However, a crucial line of code is missing. Add the missing 
+line to the code. 
+file = open('test_file.txt', 'w')
+file.write('This line will be in the file!')
+"""
+file = open('test_file.txt', 'w')
+file.write('This line will be in the file!')
+file.close()
+
+########################################################################################################################
+"""
+Files in Python
+The parameter
+
+What parameter regulates how we want to open our file and what for?
+>> mode
+"""
+
+########################################################################################################################
+"""
+Files in Python
+Mojibake
+
+Mary had a file some_text.txt that she wanted to open using this code:
+file = open('some_text.txt', 'r', encoding='cp1251')
+When she tried to print the content of the file, she got this:
+С†РёР°РЅРјР°РґР¶РµРЅС‚Р°Р¶РµР»С‚С‹Р№РєР»СЋС‡РµРІРѕР№ С†РІРµС‚
+Which parameter of the open() function did she specify incorrectly? Below, write the parameter, for example, name or 
+mode.
+>>> encoding
+"""
+
+########################################################################################################################
+"""
+Files in Python
+Mode
+
+Which mode of the open() function allows you to open the file for writing in binary without overwriting the existing 
+contents of the file?
+    a+
+X   ab
+    at
+    rb
+    w+
+    wb
+"""
+
+########################################################################################################################
+"""
+Files in Python
+Error
+
+Alice has a file called "books.txt" with all the books that she needs to read for her class. Her professor added 
+another book to the list, so Alice wants to add a new line to the file. Below you can see her code.
+However, Alice made a mistake and got a result which was absolutely not what she had expected. Can you fix her mistake?
+Don't worry about closing the file here, it will be done under the hood.
+
+# find a mistake below
+file = open('books.txt', 'w', encoding='utf-8')
+
+# closing and other operations are done below
+"""
+# # find a mistake below
+# file = open('books.txt', 'a', encoding='utf-8')
+#
+# # closing and other operations are done below
+
+########################################################################################################################
+"""
+Files in Python
+Correct files
+
+Which files below have been opened correctly?
+X   file1 = open('file1.txt')
+    file2 = open('file2.txt', 'rb', encoding='utf-8')
+    file3 = open('file3.txt', 'abt')
+X    file4 = open('file4.txt', 'w+', encoding='utf-16')
+    file5 = open()
+"""
+
+########################################################################################################################
+"""
+Files in Python
+Open the file
+
+To complete this task, follow the instructions.
+
+    Create a new file "stars.txt".
+    Open it for writing as a text.
+    Use the UTF-16 encoding.
+    Name the variable test_file.
+    Don't forget to close the file!
+"""
+# test_file = open('stars.txt', 'wt', encoding='utf-16')
+# test_file.close()
+
+########################################################################################################################
+"""
+Files in Python
+Inappropriate combination
+
+Some modes cannot be combined with each other: thus, only one of the options 'w', 'r', and 'a' must be specified, we 
+can't open a file with 'ar' mode. Similarly, we must choose either 'b' or 't', the file can't be opened both in the 
+text and binary modes.
+
+What modes can't be combined?
+X   a and r
+    r and t
+    w and b
+X   b and t
+"""
+
+########################################################################################################################
+"""
+Files in Python
+Which mode?
+
+Suppose, you want to open some file for both reading and writing. You don't want to lose the contents of your file and 
+you also don't want to get an error if by some chance the file doesn't exist. Which mode should you choose?
+
+>> a+
+"""
+
+########################################################################################################################
+"""
+Reading files
+Summer
+
+Please note: for now, when you go to the tab IDE, you can solve this problem only via Pycharm. We are sorry for the 
+inconvenience, we will fix this as soon as we can. If you prefer to solve the problem via a different IDE, you should 
+open it manually and then copy the answer to the website.
+
+To solve this problem, you will need a file – download it below. Your task is to count how many times the word summer 
+appears in the file. It contains only one word per line, all of them are lowercased. Mind that if summer is a part of 
+some other word (e.g. summertime) you should NOT count it. We only need summers themselves! Also, you don't need to 
+enter any code here, just write and run it on your machine, and then enter the result you get.
+"""
+# file = open('hyperskill-dataset-71758223.txt', 'r')
+# count_summer = 0
+# for line in file:
+#     print(line)
+#     if line == 'summer\n':
+#         count_summer += 1
+# file.close()
+# print(f"nombre de line summer: {count_summer}")
+
+########################################################################################################################
+"""
+Reading files
+Test file
+
+Suppose we have a file test.txt that looks like this:
+This
+is
+a
+test
+file
+
+Regard \n as the newline escape sequence.
+
+We want to read 10 bytes from this file:
+
+file = open("test.txt", 'r')
+print(file.read(10))
+file.close()
+
+What will be the output of this code?
+
+>>>
+This
+is
+a
+"""
+
+########################################################################################################################
+"""
+Reading files
+Methods for reading
+
+read()      Reads the file as a whole.
+readline()  Reads the file one line at a time.
+readlines() Reads the file as a list of lines.
+"""
+
+########################################################################################################################
+"""
+Reading files
+Newline escape sequences
+
+We know that lines in files are separated by the special newline escape sequences. Find all such sequences below.
+    \b
+X   \n
+    \t\b
+    \t
+X   \r\n
+X   \r
+"""
+
+########################################################################################################################
+"""
+Reading files
+Acronym
+
+You are given the file test.txt. Read it and print the first letter from each line.
+Don't forget to close the file!
+"""
+# file = open('hyperskill-dataset-71758223.txt', 'r')
+#
+# for line in file:
+#     print(line[0])
+# file.close()
+
+########################################################################################################################
+"""
+Reading files
+First
+
+There is a file called test_file.txt. Read this file and print the first line. Specify encoding='utf-16'.
+Don't forget to close the file!
+"""
+# file = open('test_file.txt', 'r', encoding='utf-16')
+# print(file.readline())
+# file.close()
+
+########################################################################################################################
+"""
+Reading files
+War and Peace
+
+Suppose you have a file that contains the entire text of "War and Peace" by Leo Tolstoy. In this file, each sentence of 
+the novel is on a new line.
+
+You want to write a program that preprocesses the text (e.g. splits sentences into words, and deletes punctuation 
+marks). What is the optimal way to read this file?
+
+X   for loop
+    readlines()
+    read()
+    readline()
+"""
+
+########################################################################################################################
+"""
+Reading files
+Line number
+"""
+
+# file = open('hyperskill-dataset-71758223.txt', 'r')
+# Solution 1
+# print(file.read().count('\n'))
+
+# Solution2
+# print(len(file.readlines()))
+
+# ATTENTION la solution 1 et 2 ne fonctionnent pas si elles sont executes toutes les 2. Il faut enlever le commentaire
+# que sur une ligne à la fois. C'est à cause du curseur qui ne revient pas a sa position initiale
+
+# Solution 3
+# counter = 0
+# for _ in file:
+#     counter += 1
+# print(counter)
+# file.close()
+
+########################################################################################################################
+"""
+Reading files
+Sum
+
+You have the file sums.txt. It has several lines, each of them containing two positive numbers separated by a 
+whitespace.
+For example:
+9 61
+15 47
+2 1
+Your program should read this file and print the sum of numbers on each line. So, if the file has n lines, you should 
+print n sums, each on a separate line.
+Don't forget to close the file!
+"""
+file = open('sums.txt', 'r')
+for line in file.readlines():
+    a, b = line.split()
+    print(int(a) + int(b))
+file.close()
+
+########################################################################################################################
+"""
+Reading files
+Seasons
+There's a file seasons.txt that looks like this:
+Spring
+Summer
+Autumn
+Winter
+We implemented the following code:
+
+seasons_file = open('seasons.txt', 'r', encoding='utf-8')
+seasons = seasons_file.readlines()
+favorite_season = seasons[2]
+seasons_file.close()
+
+What will be the value of the variable favorite_season? Write it below without quotation marks. Remember that the 
+default newline character is '\n'.
+"""
+
+########################################################################################################################
+"""
+Writing files
+"""
+########################################################################################################################
+"""
 Work on project. Stage 1/4 Mini-calculator
 Mini-calculator
 
