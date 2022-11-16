@@ -1414,12 +1414,25 @@ glob.glob('my_dir\\*[!b]')      Subdirectories with names which do not end in b.
 """
 Glob module
 A generator
+
 Let's say you want to create a generator yielding the names of all csv files in my_dir and print them. Put the lines of 
 code in the correct order. Don't forget about the indentation.
     import glob
     generator = glob.iglob("my_dir\\*.csv")
     for item in generator:
     print(item)
+"""
+
+########################################################################################################################
+"""
+Glob module
+A simple asterisk 
+
+X   A list of all files and subdirectories in my_dir.
+    a list of all .txt files in my_dir.
+    A list of all files in my_dir.
+    A list of all subdirectories in my_dir.
+    It raises an error.
 """
 
 ########################################################################################################################
@@ -1604,6 +1617,8 @@ X   pyxlsb
 ########################################################################################################################
 """
 Working with PDF in Python
+https://pythonguides.com/create-and-modify-pdf-file-in-python/
+
 Extract the metadata
 
 We can extract the metadata from PDF files using the pdf.getDocumentInfo() method. Suppose we store the metadata in the 
@@ -1757,9 +1772,9 @@ line to the code.
 file = open('test_file.txt', 'w')
 file.write('This line will be in the file!')
 """
-file = open('test_file.txt', 'w')
-file.write('This line will be in the file!')
-file.close()
+# file = open('test_file.txt', 'w')
+# file.write('This line will be in the file!')
+# file.close()
 
 ########################################################################################################################
 """
@@ -2031,16 +2046,17 @@ Your program should read this file and print the sum of numbers on each line. So
 print n sums, each on a separate line.
 Don't forget to close the file!
 """
-file = open('sums.txt', 'r')
-for line in file.readlines():
-    a, b = line.split()
-    print(int(a) + int(b))
-file.close()
+# file = open('sums.txt', 'r')
+# for line in file.readlines():
+#     a, b = line.split()
+#     print(int(a) + int(b))
+# file.close()
 
 ########################################################################################################################
 """
 Reading files
 Seasons
+
 There's a file seasons.txt that looks like this:
 Spring
 Summer
@@ -2055,12 +2071,267 @@ seasons_file.close()
 
 What will be the value of the variable favorite_season? Write it below without quotation marks. Remember that the 
 default newline character is '\n'.
+answer: Autumn\n
 """
 
 ########################################################################################################################
 """
 Writing files
+What's the difference?
+
+What is the difference between write()and writelines()?
 """
+
+########################################################################################################################
+"""
+Writing files
+Solar system
+
+Create a file planets.txt and write the names of the Solar system planets there, each on a new line. In total, the file 
+should contain 8 lines with the following planets: Mercury, Venus, Earth, Mars, Jupiter, Saturn, Uranus, and Neptune.
+When opening the file, specify encoding='utf-8'.
+"""
+# # Solution 1
+# file = open('planets.txt', 'w', encoding='utf-8')
+# for name in ("Mercury", "Venus", "Earth", "Mars", "Jupiter", "Saturn", "Uranus", "Neptune"):
+#     file.write(f'{name}\n')
+# file.close()
+#
+# # Solution 2
+# planets = ['Mercury\n', 'Venus\n', 'Earth\n', 'Mars\n', 'Jupiter\n', 'Saturn\n', 'Uranus\n', 'Neptune']
+# file = open('planets2.txt ', 'w', encoding='utf-8')
+# file.writelines(planets)
+# file.close()
+
+########################################################################################################################
+"""
+Writing files
+1 to 10
+
+We have a file numbers.txt that contains a single line with the number 1. Suppose, we run the following code:
+file = open('numbers.txt', 'a')
+
+for i in range(2, 11):
+    file.write(str(i) + ' ')
+
+file.close()
+
+How many lines will numbers.txt contain after this?
+"""
+# file = open('numbers.txt', 'a')
+#
+# for i in range(2, 11):
+#     file.write(str(i) + ' ')
+#
+# file.close()
+
+########################################################################################################################
+"""
+Writing files
+Sort the code
+
+In this task, you have to sort the lines of the code given below. Mind that first we need to create a list of animals.
+animals = ['cat\n', 'dog\n', 'hamster\n']
+animal_file = open('animals.txt', 'w', encoding='utf-8')
+animal_file.writelines(animals)
+animal_file.close()
+"""
+
+########################################################################################################################
+"""
+Writing files
+Songs
+
+Suppose we have a file songs.txt that contains a single line: Space Oddity. We have implemented the following code:
+
+f = open('songs.txt', 'w', encoding='utf-8')
+f.write('Life on Mars')
+f.close()
+
+What will be the contents of songs.txt after this?
+    Space Oddity Life on Mars
+    Space Oddity
+    Life on Mars
+    Space Oddity
+X   Life on Mars
+"""
+
+########################################################################################################################
+"""
+Writing files
+Input
+
+Read a line from input and write it to the file input.txt.
+"""
+# text = input()
+# f = open('input.txt', 'w')
+# f.write(text)
+# f.close()
+
+########################################################################################################################
+"""
+Writing files
+Travel
+
+There's a file countries.txt that contains a list of the countries Kate has visited. For example:
+
+France
+China
+Brazil
+
+During her last trip, she visited Turkey for the first time. Add Turkey to the countries.txt file.
+
+Kate will not give up traveling, so it would be reasonable to add a newline character at the end.
+
+Don't forget to close the file!
+"""
+# # animals = ['cat\n', 'dog\n', 'hamster\n']
+# # animal_file = open('animals.txt', 'w', encoding='utf-8')
+# # animal_file.writelines(animals)
+# # animal_file.close()
+#
+# # # Solution 1
+# last_country = ['Turkey\n']
+# file = open('countries.txt', 'a', encoding='utf-8')
+# file.writelines(last_country)
+# file.close()
+#
+# # Solution 2
+# last_country = ['Turkey\n']
+# file = open('countries2.txt', 'a', encoding='utf-8')
+# file.write(last_country[0])
+# file.close()
+
+########################################################################################################################
+"""
+Writing files
+CMYK
+
+You have a list of strings color_list and you have implemented the following code to write it to the file CMYK.txt:
+
+color_list = ['cyan', 'magenta', 'yellow', 'key color']
+
+cmyk_file = open('CMYK.txt', 'w', encoding='utf-8')
+cmyk_file.writelines(color_list)
+cmyk_file.close()
+
+What will be the contents of the file CMYK.txt?
+"""
+# color_list = ['cyan', 'magenta', 'yellow', 'key color']
+#
+# cmyk_file = open('CMYK.txt', 'w', encoding='utf-8')
+# cmyk_file.writelines(color_list)
+# cmyk_file.close()
+
+########################################################################################################################
+"""
+Writing files
+Animals
+
+The file animals.txt has a list of animals, each written on a new line. For example:
+
+rabbit
+cat
+turtle
+
+Create a new file, animals_new.txt, where those animals are written on a single line and separated by a whitespace.
+
+Don't forget to close all files!
+"""
+# # read animals.txt
+# # and write animals_new.txt
+# with open('animals.txt') as file_1:
+#     animals = file_1.read().replace('\n', ' ')
+#     with open('animals_new.txt', 'w') as file_2:
+#         file_2.write(animals)
+
+########################################################################################################################
+"""
+Context manager
+Error 
+
+The code below is supposed to write years from 2010 to 2020 to the file years.txt. However, something's wrong with the code.
+Find the mistake and fix it.
+with open('years.txt', 'w', encoding='utf-8') as f:
+    for i in range(2010, 2020):
+        f.write(str(i) + " ")
+
+f.write('2020')
+
+Solution:
+with open('years.txt', 'w', encoding='utf-8') as f:
+    for i in range(2010, 2020):
+        f.write(str(i) + " ")
+
+    f.write('2020')
+"""
+
+
+########################################################################################################################
+"""
+Context manager
+Rewrite
+
+Rewrite the following code using the with keyword:
+f = open('test.txt', 'w')
+f.write('Tada!')
+f.close()
+
+f.close()
+
+Please open a context manager with the name f.
+"""
+with open('test.txt', 'w') as f:
+    f.write('Tada!')
+
+########################################################################################################################
+"""
+Context manager
+The purpose
+
+What is the main purpose of context managers?
+    Making the code more concise
+    Handling exceptions
+    Opening files
+X   Managing the resources 
+"""
+
+########################################################################################################################
+"""
+Context manager
+Full name
+
+Rewrite the code below using the with keyword.
+Make sure to use the same variable names for file objects!
+f1 = open('name.txt')
+f2 = open('surname.txt')
+f3 = open('full_name.txt', 'w')
+
+name = f1.read()
+surname = f2.read()
+
+full_name = name + ' ' + surname
+
+f3.write(full_name)
+"""
+with open('name.txt') as f1:
+    name = f1.read()
+with open('surname.txt') as f2:
+    surname = f2.read()
+with open('full_name.txt', 'w') as f3:
+    full_name = name + ' ' + surname
+    f3.write(full_name)
+
+########################################################################################################################
+"""
+Context manager
+10 files
+
+Create 10 files, named file1.txt, file2.txt and so on till file10.txt. The files should contain the number 
+corresponding to their name. So, file1.txt should contain one line with number 1, file2.txt — one line with number 2 
+and so on.
+"""
+
 ########################################################################################################################
 """
 Work on project. Stage 1/4 Mini-calculator
