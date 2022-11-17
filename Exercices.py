@@ -2281,8 +2281,8 @@ f.close()
 
 Please open a context manager with the name f.
 """
-with open('test.txt', 'w') as f:
-    f.write('Tada!')
+# with open('test.txt', 'w') as f:
+#     f.write('Tada!')
 
 ########################################################################################################################
 """
@@ -2314,13 +2314,13 @@ full_name = name + ' ' + surname
 
 f3.write(full_name)
 """
-with open('name.txt') as f1:
-    name = f1.read()
-with open('surname.txt') as f2:
-    surname = f2.read()
-with open('full_name.txt', 'w') as f3:
-    full_name = name + ' ' + surname
-    f3.write(full_name)
+# with open('name.txt') as f1:
+#     name = f1.read()
+# with open('surname.txt') as f2:
+#     surname = f2.read()
+# with open('full_name.txt', 'w') as f3:
+#     full_name = name + ' ' + surname
+#     f3.write(full_name)
 
 ########################################################################################################################
 """
@@ -2330,6 +2330,47 @@ Context manager
 Create 10 files, named file1.txt, file2.txt and so on till file10.txt. The files should contain the number 
 corresponding to their name. So, file1.txt should contain one line with number 1, file2.txt — one line with number 2 
 and so on.
+"""
+# for i in range(1, 11):
+#     with open(f"file{i}.txt", 'w') as f:
+#         f.write(f"{i}")
+#     f.close()
+
+########################################################################################################################
+"""
+Context manager
+Yearly income
+
+The file salary.txt contains a monthly salary of all employees in the company. Assume that the monthly salary is fixed 
+and each employee is mentioned once. So, each number (an integer) written on a separate line corresponds to a particular 
+employee:
+
+3500
+4780
+6666
+...
+
+According to the example, the first worker gets 3,500 per month, the second one 4,780 and the third 6,666, etc.
+
+Calculate how much each employee earns per year and save their yearly income to a file salary_year.txt. Similarly to the 
+original file, each income should be on a separate line. Preserve the order as it helps identify an employee.
+"""
+result = 0
+year_in_months = 12
+with open('salary.txt', 'r') as f1:
+    with open('salary_year.txt', 'w') as f2:
+        for number in f1:
+            result = int(number.replace("\n", "")) * year_in_months
+            f2.write(str(result)+"\n")
+
+########################################################################################################################
+"""
+Context manager
+Equivalent
+
+Which option below is equivalent to the following code?
+with open('alien.txt', 'w') as f:
+    f.write('Take us to your leader!')
 """
 
 ########################################################################################################################
