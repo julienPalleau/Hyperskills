@@ -7,6 +7,7 @@ Write a program that calculates the remainder of 10 divided by 3 and prints the 
 # print(10 % 3)
 
 ########################################################################################################################
+import csv
 from typing import List
 
 import openpyxl
@@ -2355,13 +2356,13 @@ According to the example, the first worker gets 3,500 per month, the second one 
 Calculate how much each employee earns per year and save their yearly income to a file salary_year.txt. Similarly to the 
 original file, each income should be on a separate line. Preserve the order as it helps identify an employee.
 """
-result = 0
-year_in_months = 12
-with open('salary.txt', 'r') as f1:
-    with open('salary_year.txt', 'w') as f2:
-        for number in f1:
-            result = int(number.replace("\n", "")) * year_in_months
-            f2.write(str(result)+"\n")
+# result = 0
+# year_in_months = 12
+# with open('salary.txt', 'r') as f1:
+#     with open('salary_year.txt', 'w') as f2:
+#         for number in f1:
+#             result = int(number.replace("\n", "")) * year_in_months
+#             f2.write(str(result)+"\n")
 
 ########################################################################################################################
 """
@@ -2372,6 +2373,161 @@ Which option below is equivalent to the following code?
 with open('alien.txt', 'w') as f:
     f.write('Take us to your leader!')
 """
+
+########################################################################################################################
+"""
+Working with CSV
+Useful PEP
+
+What PEP is dedicated to CSV files?
+    PEP 306
+    PEP 20
+    PEP 8
+X   PEP 305
+"""
+
+########################################################################################################################
+"""
+Working with CSV
+Data entry
+
+What is a data entry?
+    It is a name of the library for working with CSV files in Python.
+    It is a table in a CSV file.
+X   In a CSV file, it is a simple line with some text information separated by commas.
+"""
+
+########################################################################################################################
+"""
+Working with CSV
+The first line
+
+What does the first line of a CSV file contain?
+X   The titles of columns
+    The separators
+    The information for each column
+    Meta-information about the file
+"""
+
+########################################################################################################################
+"""
+Working with CSV
+What is CSV?
+
+What does CSV stand for?
+    comma-separated valuations
+    comma-semicolon values
+    column-separated values
+X   comma-separated values
+"""
+
+########################################################################################################################
+"""
+Working with CSV
+DictReader and DictWriter
+
+    What is the main purpose of DictReader and DictWriter?
+    They allow you to delete csv.
+    They allow you to import the csv library.
+    They allow you to read and write any type of files.
+X   They allow you to work with information from csv-files as dictionaries.
+"""
+
+########################################################################################################################
+"""
+Working with CSV
+Separator
+
+What separator do programmers usually use in CSV files?
+,
+"""
+
+########################################################################################################################
+"""
+Working with CSV
+Finances
+
+Now try to create a program for working with CSV files on your computer. We have attached a file where you can find the 
+information on the financial statistics of a government in June 2019. Your task is to open this file, process the data, 
+and count how many data entries have the FINAL status (it is specified in the STATUS column). Print the number in the 
+box below.
+"""
+# # Repons à l'exercice
+# with open("government-finance-statistics-general-government-year-ended-june-2019-csv.csv", "r") as f:
+#     file_reader = csv.DictReader(f, delimiter=",")
+#     counter = 0
+#     for line in file_reader:
+#         if line['STATUS'] == 'FINAL':
+#             counter += 1
+#     print(counter)
+
+
+# In addition:
+
+# Print all the line with header, value as a dictionary
+# with open("government-finance-statistics-general-government-year-ended-june-2019-csv.csv", "r") as f:
+#     file_reader = csv.DictReader(f, delimiter=",")
+#     for line in file_reader:
+#         print(line)
+#         print(line['Series_reference'], line['Period'], line['Data_value'], line['STATUS'], line['UNITS'],
+#               line['MAGNTUDE'], line['Subject'], line['Group'], line['Series_title_1'], line['Series_title_2'],
+#               line['Series_title_3'], line['Series_title_4'], line['Series_title_5'])
+
+
+# Print all the lines including the header line
+# with open("government-finance-statistics-general-government-year-ended-june-2019-csv.csv", "r") as f:
+#     file_reader = csv.reader(f)
+#     for line in file_reader:
+#         print(line)
+
+########################################################################################################################
+"""
+Working with CSV
+Spirits
+
+We all know that too much drinking is bad. Scientists often create tables in which they try to fix the alcohol available
+for people to track its further consumption. We have attached an example of this file: the availability of alcohol in 
+December 2019. Your task is to create a program for reading this CSV file, then count the number of data records that 
+have 0 in the MAGNITUDE column. Finally, print this number in the box below.
+"""
+# with open('alcohol-available-for-consumption-year-ended-december-2019-csv.csv', 'r') as f:
+#     file_reader = csv.DictReader(f, delimiter=',')
+#     counter = 0
+#     for line in file_reader:
+#         print(line)
+#         if line['MAGNITUDE'] == '0':
+#             counter += 1
+#     print(counter)
+
+########################################################################################################################
+"""
+Working with CSV
+Easy code
+
+Order the lines of the code that help you to read and print information from the given CSV file.
+students = open('students.csv', 'r', encoding='utf-8')
+for line in students:
+  separ_line = line.split(',')
+  print(separ_line)
+students.close()
+"""
+
+########################################################################################################################
+"""
+Working with CSV
+Cities
+
+Imagine you have a file where you can find information about the population and the sizes of all the cities in the 
+world. City names are in the first column, their population is in the second one, the sizes are in the third one. You 
+also have a code that computes the number of cities that have a population of more than 1000000 people. Unfortunately, 
+the lines got mixed. You need to put them in the right order.
+"""
+# with open("cities", "r", encoding='utf-8') as cities:
+#     count = 0
+#     for line in cities:
+#         split_line = line.split(",")
+#         if int(split_line[1]) > 1000000:
+#             count += 1
 
 ########################################################################################################################
 """
