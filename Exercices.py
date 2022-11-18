@@ -2531,6 +2531,164 @@ the lines got mixed. You need to put them in the right order.
 
 ########################################################################################################################
 """
+List
+From X to a list
+
+Select all Python objects that can be converted to a list with the list() function.
+    Floating-point numbers
+X   Strings
+    Integer numbers
+"""
+
+########################################################################################################################
+"""
+List
+List element
+
+Match the list from the first column with the correct number of its elements.
+[]                                  0
+["brouhaha"]                        1
+list("canoodle")                    8
+[1, [2, 3], [4, 5], 6]              4
+["1", "2", "3", "5", "8", "13"]     6
+"""
+
+########################################################################################################################
+"""
+List
+How to create a list
+
+Select all ways to create a list in Python.
+    Via single or double quotation marks: '', "".
+X   Via square brackets: [].
+    Via curly brackets: {}.
+x   Via list() function.
+
+"""
+
+########################################################################################################################
+"""
+List
+Reveal the hidden
+
+There's a variable hidden, which contains a list. Count the number of elements in this list and print the length of the 
+list.    
+"""
+# # the following line reads the input and converts it into a list; do not modify it, please
+# hidden = list(input())
+# print(len(hidden))
+
+########################################################################################################################
+"""
+List
+What does len() do?
+We applied the function len() to a list. What does the returned number stand for?
+
+    The index of the last element in the list.
+    The last element appended to the list.
+X   How many elements there are in the list.
+    How many unique elements there are in the list.
+    How many different data types there are in the list.
+"""
+
+########################################################################################################################
+"""
+List
+An empty list!
+Write a program that will create an em_list variable. Assign an empty list to it, then print your empty list.
+"""
+# em_list = []
+# print(em_list)
+
+########################################################################################################################
+"""
+List
+Find the right list
+What is the correct representation of a list?
+
+    [5, 6, 7, "8"}
+X   [1, '2', 3, "4"]
+    [1 2 3 4 5]
+    ('1', 2, 3, '4')
+"""
+
+########################################################################################################################
+"""
+List
+Single-element list
+Helen wants to create a list containing only one element – a string with her name. To do this, she wrote this line of code:
+name = list('Helen')
+However, when she prints the list, her name appears broken into several one-letter strings:
+print(name)
+# ['H', 'e', 'l', 'e', 'n']
+Why? Fix this code.
+"""
+# name = list(['Helen'])
+# print(name)
+
+########################################################################################################################
+"""
+List
+Recall len()
+Select all datatypes the len() function can be used with.
+
+X   a list
+    an integer
+    a Boolean
+X   a string
+    a float
+"""
+
+########################################################################################################################
+"""
+List
+Features of a list
+Select false statement(s) about lists:
+
+    lists can store different types of elements (e.g. strings and numbers)
+    the elements' order matters
+    lists can store duplicate values
+X   lists cannot be empty
+"""
+
+########################################################################################################################
+"""
+List
+Creating a list
+
+    ()
+X   list()
+    list[123]
+X   ["1", "2", "3"]
+X   [7, "wonders"]
+"""
+
+########################################################################################################################
+"""
+List
+List from string
+Write a program that constructs a list from the given string's symbols and then prints it.
+So, if input_str, for example, contains a string "python", your program should turn it to the list 
+['p', 'y', 't', 'h', 'o', 'n'] and print it.
+"""
+input_str = input()
+print(list(input_str))
+
+########################################################################################################################
+"""
+List
+Syntax for the list
+How to create a list containing numbers?
+
+    (1, 2, 3, 4, 5)
+    {1, 2, 3, 4, 5}
+    list(1, 2, 3, 4, 5)
+    "1 2 3 4 5"
+X   [1, 2, 3, 4, 5]
+"""
+
+########################################################################################################################
+"""
 Work on project. Stage 1/4 Mini-calculator
 Mini-calculator
 
