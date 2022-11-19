@@ -519,224 +519,6 @@ suggestion = "What if I write it in "double quotes"?
 
 ########################################################################################################################
 """
-List comprehension
-Else comprehension
-# the following line reads the list from the input, do not modify it, please
-old_list = [int(num) for num in input().split()]
-
-binary_list = # your code here
-print(binary_list)
-"""
-# old_list = [int(num) for num in input().split()]
-# print(old_list)
-#
-# binary_list = [1 if i > 0 else 0 for i in old_list]
-# print(binary_list)
-
-########################################################################################################################
-"""
-List comprehension
-Plus one
-You are given a list of strings containing integer numbers. Print the list of their values increased by 1.
-E.g. if list_of_strings = ["36", "45", "99"], your program should print the list [37, 46, 100].
-The variable list_of_strings is already defined, you don't need to work with the input or define it again.
-"""
-# list_of_strings = [int(num) for num in input().split()]
-# print([int(i) + 1 for i in list_of_strings])
-
-########################################################################################################################
-"""
-List comprehension
-Length
-Given a list of words in the code below, create a list of lengths of those words and print it.
-words = ["apple", "it", "creek", "pelican", "subsequent", "horse", "apothecary"]
-"""
-# words = ["apple", "it", "creek", "pelican", "subsequent", "horse",
-#          "apothecary"]
-# list_of_length = [len(word) for word in words]
-# print(list_of_length)
-
-########################################################################################################################
-"""
-List comprehension
-Boundary
-Write a program that divides numbers into two lists depending on whether they are greater than or less than 5. You don't
- have to include number 5 itself.
-A sequence of numbers has been read from the input for you.
-# work with a list from this variable
-numbers = [int(n) for n in input()]
-
-# change the next two lines
-less_than_5 = ...
-greater_than_5 = ...
-
-# printing your results
-print(less_than_5)
-print(greater_than_5)
-"""
-# # work with a list from this variable
-# numbers = [int(n) for n in input().split()]
-#
-# # change the next two lines
-# less_than_5 = [number for number in numbers if number < 5]
-# greater_than_5 = [number for number in numbers if number > 5]
-#
-# # printing your results
-# print(less_than_5)
-# print(greater_than_5)
-
-########################################################################################################################
-"""
-List comprehension
-Even numbers
-
-Write a program that takes a list of numbers, creates another list of even numbers from the first list, and prints it.
-
-E.g. if my_numbers = [1, 2, 3, 4, 5], then your program should print the list [2, 4].
-
-# the following line reads the list from the input; do not modify it, please
-my_numbers = [int(x) for x in input().split(" ")]
-
-# work with the variable 'my_numbers'
-"""
-# # the following line reads the list from the input; do not modify it, please
-# my_numbers = [int(x) for x in input().split(" ")]
-#
-# # work with the variable 'my_numbers'
-# result = [number for number in my_numbers if number % 2 == 0]
-# print(result)
-
-########################################################################################################################
-"""
-List comprehension
-The mean
-
-Given a numeric sequence at the input, create a list in which each number will be a digit from this input string. Then
-use this list to calculate the arithmetic mean, that is, the sum of all the digits divided by their total count.
-Don't forget to print your result.
-"""
-# test = [float(i) for i in list(input())]
-# print(sum(test) / len(test))
-
-
-########################################################################################################################
-"""
-List comprehension
-How many days?
-
-The list seconds is a list of numbers that represent seconds. Convert the number of seconds to full days and print the 
-list that contains these values. The number of full days should be an int value.
-seconds = [86400, 1028397, 8372891, 219983, 865779330, 3276993204380912]
-# create a list of days here
-"""
-# seconds = [86400, 1028397, 8372891, 219983, 865779330, 3276993204380912]
-# nb_days = [second // (3600 * 24) for second in seconds]
-# print(nb_days)
-
-########################################################################################################################
-"""
-List comprehension
-Threefold
-
-Print a list of numbers from 1 to 1000 that can be divided by 3.
-"""
-# list_of_numbers = [print(x) for x in range(0, 1001) if x % 3 == 0]
-#
-# # or to get it validated
-# list_of_numbers = [x for x in range(1, 1001) if x % 3 == 0]
-# print(list_of_numbers)
-
-########################################################################################################################
-"""
-List comprehension
-Vowels
-
-Read a string from the input and print a list of vowels that belong to that string.
-All vowels are enlisted in a variable of the same name.
-
-vowels = 'aeiou'
-# create your list here
-"""
-# vowels = 'aeiou'
-# string = input()
-# vowels_list = [letter for letter in string if letter in vowels]
-# print(vowels_list)
-
-########################################################################################################################
-"""
-List comprehension
-Odd numbers
-
-Read a string with digits from the input and convert each number to an integer. Create a list in which you should
-include only odd digits. Finally, print what you'll get.
-
-Sample Input 1:
-87113420
-
-Sample Output 1:
-[7, 1, 1, 3]
-"""
-# list_numbers = input()
-# print([int(i) for i in list_numbers if int(i) % 2 == 1])
-
-########################################################################################################################
-"""
-List comprehension
-A list of words
-
-Write a program that takes a list with words, creates a new list of words that start with the letter "a" in the first
-list, and prints it.
-Some words may begin with the capital A! Leave them in their original form in the resulting list.
-E.g. if words = ['apple', 'pear', 'banana', 'Ananas'], then your program should print the list ['apple', 'Ananas'].
-The list with words is already defined: you can access it using the variable words.
-"""
-# words = ['apple', 'pear', 'banana', 'Ananas']
-# words = [word for word in words if word.startswith("a") or word.startswith("A")]
-# print(words)
-
-########################################################################################################################
-"""
-List comprehension
-Running total
-
-Given a numeric sequence, create a list in which each number will be a digit from this input string. Then use this list
-to calculate the running total, or cumulative sum. Essentially, it's a new list of partial sums that gets updated every
-time a new element appears.
-For example, we can transform the list [1, 2, 3] to [1, 1 + 2, 1 + 2 + 3], which equals to [1, 3, 6].
-"""
-# Solution 1
-# prior python 3.8
-
-
-# list_numbers = list(input())
-# list_beta = [int(number) for number in list_numbers]
-# j = 0
-# result=[]
-# for i in list_beta:
-#     i += j
-#     j = i
-#     result.append(i)
-#
-# print(result)
-
-
-# Solution 2
-# works only for python 3.8 and above
-# list_numbers = list(input())
-# result = 0
-# print([result := result + int(list_numbers[i]) for i in range(len(list_numbers))])
-
-# Solution 3
-# numbers = [int(x) for x in list(input())]
-# new_list = [sum(numbers[:i + 1]) for i, x in enumerate(numbers)]
-# print(new_list)
-
-# Rappel
-# test = [0, 1, 2, 3, 4, 5]
-# print(test[:6])
-
-########################################################################################################################
-"""
 Any and all
 Prime numbers
 
@@ -2861,24 +2643,306 @@ Output: either "Lucky" or "Ordinary" (without quotes).
 Make sure that you are NOT concatenating strings. To do this, convert each digit in the ticket number to an integer. 
 Don't forget to use proper indices.
 """
-# Save the input in this variable
-ticket = [int(item) for item in list(input())]
+# # Save the input in this variable
+# ticket = [int(item) for item in list(input())]
+#
+# # Add up the digits for each half
+# # half1 = ticket[0] + ticket[1] + ticket[2]
+# half1 = sum(ticket[0:3])
+#
+# # half2 = ticket[-1] + ticket[-2] + ticket[-3]
+# half2 = sum(ticket[:-4:-1]) # on parcours en sens inverse la liste(-1) et on va du dernier element à l'element -3 il
+#                             # faut mettre -4 car dans la borne sup. est toujours exclu
+#
+# print(half1, half2)
+#
+# # Thanks to you, this code will work
+# if half1 == half2:
+#     print("Lucky")
+# else:
+#     print("Ordinary")
 
-# Add up the digits for each half
-# half1 = ticket[0] + ticket[1] + ticket[2]
-half1 = sum(ticket[0:3])
+########################################################################################################################
+"""
+List comprehension
+Else comprehension
+# the following line reads the list from the input, do not modify it, please
+old_list = [int(num) for num in input().split()]
 
-# half2 = ticket[-1] + ticket[-2] + ticket[-3]
-half2 = sum(ticket[:-4:-1]) # on parcours en sens inverse la liste(-1) et on va du dernier element à l'element -3 il
-                            # faut mettre -4 car dans la borne sup. est toujours exclu
+binary_list = # your code here
+print(binary_list)
+"""
+# old_list = [int(num) for num in input().split()]
+# print(old_list)
+#
+# binary_list = [1 if i > 0 else 0 for i in old_list]
+# print(binary_list)
 
-print(half1, half2)
+########################################################################################################################
+"""
+List comprehension
+Plus one
+You are given a list of strings containing integer numbers. Print the list of their values increased by 1.
+E.g. if list_of_strings = ["36", "45", "99"], your program should print the list [37, 46, 100].
+The variable list_of_strings is already defined, you don't need to work with the input or define it again.
+"""
+# list_of_strings = [int(num) for num in input().split()]
+# print([int(i) + 1 for i in list_of_strings])
 
-# Thanks to you, this code will work
-if half1 == half2:
-    print("Lucky")
-else:
-    print("Ordinary")
+########################################################################################################################
+"""
+List comprehension
+Length
+Given a list of words in the code below, create a list of lengths of those words and print it.
+words = ["apple", "it", "creek", "pelican", "subsequent", "horse", "apothecary"]
+"""
+# words = ["apple", "it", "creek", "pelican", "subsequent", "horse",
+#          "apothecary"]
+# list_of_length = [len(word) for word in words]
+# print(list_of_length)
+
+########################################################################################################################
+"""
+List comprehension
+Boundary
+Write a program that divides numbers into two lists depending on whether they are greater than or less than 5. You don't
+ have to include number 5 itself.
+A sequence of numbers has been read from the input for you.
+# work with a list from this variable
+numbers = [int(n) for n in input()]
+
+# change the next two lines
+less_than_5 = ...
+greater_than_5 = ...
+
+# printing your results
+print(less_than_5)
+print(greater_than_5)
+"""
+# # work with a list from this variable
+# numbers = [int(n) for n in input().split()]
+#
+# # change the next two lines
+# less_than_5 = [number for number in numbers if number < 5]
+# greater_than_5 = [number for number in numbers if number > 5]
+#
+# # printing your results
+# print(less_than_5)
+# print(greater_than_5)
+
+########################################################################################################################
+"""
+List comprehension
+Even numbers
+
+Write a program that takes a list of numbers, creates another list of even numbers from the first list, and prints it.
+
+E.g. if my_numbers = [1, 2, 3, 4, 5], then your program should print the list [2, 4].
+
+# the following line reads the list from the input; do not modify it, please
+my_numbers = [int(x) for x in input().split(" ")]
+
+# work with the variable 'my_numbers'
+"""
+# # the following line reads the list from the input; do not modify it, please
+# my_numbers = [int(x) for x in input().split(" ")]
+#
+# # work with the variable 'my_numbers'
+# print([number for number in my_numbers if number % 2 == 0])
+
+
+########################################################################################################################
+"""
+List comprehension
+The mean
+
+Given a numeric sequence at the input, create a list in which each number will be a digit from this input string. Then
+use this list to calculate the arithmetic mean, that is, the sum of all the digits divided by their total count.
+Don't forget to print your result.
+"""
+# test = [float(i) for i in list(input())]
+# print(sum(test) / len(test))
+
+
+########################################################################################################################
+"""
+List comprehension
+How many days?
+
+The list seconds is a list of numbers that represent seconds. Convert the number of seconds to full days and print the 
+list that contains these values. The number of full days should be an int value.
+seconds = [86400, 1028397, 8372891, 219983, 865779330, 3276993204380912]
+# create a list of days here
+"""
+# seconds = [86400, 1028397, 8372891, 219983, 865779330, 3276993204380912]
+# nb_days = [second // (3600 * 24) for second in seconds]
+# print(nb_days)
+
+########################################################################################################################
+"""
+List comprehension
+Threefold
+
+Print a list of numbers from 1 to 1000 that can be divided by 3.
+"""
+# list_of_numbers = [print(x) for x in range(0, 1001) if x % 3 == 0]
+#
+# # or to get it validated
+# list_of_numbers = [x for x in range(1, 1001) if x % 3 == 0]
+# print(list_of_numbers)
+
+########################################################################################################################
+"""
+List comprehension
+Vowels
+
+Read a string from the input and print a list of vowels that belong to that string.
+All vowels are enlisted in a variable of the same name.
+
+vowels = 'aeiou'
+# create your list here
+"""
+# vowels = 'aeiou'
+# create your list here
+# string = input()
+# vowels_list = [letter for letter in string if letter in vowels]
+# print(vowels_list)
+
+########################################################################################################################
+"""
+List comprehension
+Odd numbers
+
+Read a string with digits from the input and convert each number to an integer. Create a list in which you should
+include only odd digits. Finally, print what you'll get.
+
+Sample Input 1:
+87113420
+
+Sample Output 1:
+[7, 1, 1, 3]
+"""
+# list_numbers = input()
+# print([int(i) for i in list_numbers if int(i) % 2 == 1])
+
+########################################################################################################################
+"""
+List comprehension
+A list of words
+
+Write a program that takes a list with words, creates a new list of words that start with the letter "a" in the first
+list, and prints it.
+Some words may begin with the capital A! Leave them in their original form in the resulting list.
+E.g. if words = ['apple', 'pear', 'banana', 'Ananas'], then your program should print the list ['apple', 'Ananas'].
+The list with words is already defined: you can access it using the variable words.
+"""
+# words = ['apple', 'pear', 'banana', 'Ananas']
+# words = [word for word in words if word.startswith("a") or word.startswith("A")]
+# print(words)
+
+########################################################################################################################
+"""
+List comprehension
+Running total
+
+Given a numeric sequence, create a list in which each number will be a digit from this input string. Then use this list
+to calculate the running total, or cumulative sum. Essentially, it's a new list of partial sums that gets updated every
+time a new element appears.
+For example, we can transform the list [1, 2, 3] to [1, 1 + 2, 1 + 2 + 3], which equals to [1, 3, 6].
+"""
+# Solution 1
+# prior python 3.8
+
+
+# list_numbers = list(input())
+# list_beta = [int(number) for number in list_numbers]
+# j = 0
+# result=[]
+# for i in list_beta:
+#     i += j
+#     j = i
+#     result.append(i)
+#
+# print(result)
+
+
+# Solution 2
+# works only for python 3.8 and above
+# list_numbers = list(input())
+# result = 0
+# print([result := result + int(list_numbers[i]) for i in range(len(list_numbers))])
+
+# Solution 3
+# numbers = [int(x) for x in list(input())]
+# new_list = [sum(numbers[:i + 1]) for i, x in enumerate(numbers)]
+# print(new_list)
+
+# Rappel
+# test = [0, 1, 2, 3, 4, 5]
+# print(test[:6])
+
+"""
+List comprehension
+Else comprehension
+
+Write a program that converts a given list into a list with binary values: either 1 or 0. If the number in the initial 
+list was greater than 0, in the binary list there should be 1, and if the number was less or equal, in the new list you 
+should write 0. Naturally, use the list comprehension and print the result.
+Given list: a list with integer numbers, e.g. [5, 0, 4, -10].
+Output list: a list consisting of ones and zeros, e.g. [1, 0, 1, 0].
+"""
+# # the following line reads the list from the input, do not modify it, please
+# old_list = [int(num) for num in input().split()]
+#
+# binary_list = [1 if num > 0 else 0 for num in old_list]
+# print(binary_list)
+
+# >> 5 0 4 -10
+# >> [1, 0, 1, 0]
+########################################################################################################################
+"""
+List comprehension
+Plus one
+
+You are given a list of strings containing integer numbers. Print the list of their values increased by 1.
+E.g. if list_of_strings = ["36", "45", "99"], your program should print the list [37, 46, 100].
+The variable list_of_strings is already defined, you don't need to work with the input or define it again.
+"""
+# # please work with the variable 'list_of_strings'
+# list_of_strings = [10, 100, 1000, 10000]
+# print([int(result)+1 for result in list_of_strings])
+
+########################################################################################################################
+"""
+List comprehension
+Syntax with a condition
+
+Match a list comprehension expression with the value of new_list where the old_list is:
+old_list = [1, 1, 2, 3, 5, 8, 13, 21, 34, 55]       
+new_list = [x for x in old_list if x % 2 == 0]      [2, 8, 34]
+new_list = [x for x in old_list if x >= 8]          [8, 13, 21, 34, 55]
+new_list = [x*2 for x in old_list if x < 13]        [2, 2, 4, 6, 10, 16]
+new_list = [x*2 for x in old_list if x % 2 == 1]    [2, 2, 6, 10, 26, 42, 110]
+new_list = [x*2 for x in old_list]                  [2, 2, 4, 6, 10, 16, 26, 42, 68, 110]
+"""
+
+########################################################################################################################
+"""
+List comprehension
+Length
+
+Given a list of words in the code below, create a list of lengths of those words and print it.
+"""
+
+# words = ["apple", "it", "creek", "pelican", "subsequent", "horse",
+#          "apothecary"]
+# print([len(word) for word in words])
+
+########################################################################################################################
+"""
+Nested lists
+"""
+
 ########################################################################################################################
 """
 Work on project. Stage 1/4 Mini-calculator
