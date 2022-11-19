@@ -2671,8 +2671,8 @@ Write a program that constructs a list from the given string's symbols and then 
 So, if input_str, for example, contains a string "python", your program should turn it to the list 
 ['p', 'y', 't', 'h', 'o', 'n'] and print it.
 """
-input_str = input()
-print(list(input_str))
+# input_str = input()
+# print(list(input_str))
 
 ########################################################################################################################
 """
@@ -2687,6 +2687,198 @@ How to create a list containing numbers?
 X   [1, 2, 3, 4, 5]
 """
 
+########################################################################################################################
+"""
+Indexe
+Error indexes
+
+What lines are correct and do not throw an error?
+Remember that the first square brackets denote a list, and all the rest include indexes.
+X   [1, 2, 3, 4][-4]
+    [1, 2, 3][-4]
+X   [1, 2, 3, 4][3]
+    [1, 2, 3, 4][4]
+"""
+
+########################################################################################################################
+"""
+Indexe
+Different alphabets
+
+We have created a variable alphabet for lowercase alphabets of different languages. Your task is to print the 15th 
+letter of this string.
+"""
+# # don't modify the variable below, please
+# alphabet = input()
+# # put your python code here
+# print(alphabet[14])
+
+########################################################################################################################
+"""
+Indexe
+Guess the outcome
+
+Guess what happens when we run the code below:
+boat = [1, 2, 3, 'dog']
+print(boat[4])
+
+    boat[4]
+    1
+    'dog'
+X   IndexError
+"""
+
+########################################################################################################################
+"""
+Indexe
+The syntax
+
+What is the syntax for accessing an element of a list by an index?
+    index(list)
+X   list[index]
+    list(index)
+    list.index()
+    list.element(index)
+"""
+
+########################################################################################################################
+"""
+Indexe
+Initials
+
+Find the first letter of a person's name and print it out.
+Make use of the variable name that stores a string.
+"""
+# # the following line reads the name from the input, do not modify it, please
+# name = input()
+#
+# # your code here
+# print(name[0])
+
+########################################################################################################################
+"""
+Indexe
+Find the third number
+
+The list prices contains several numbers. Print the third number from this list.
+For example, if prices looks like [170, 309, 224, 991, 4000], you should print 224.
+"""
+# # the following line reads the list from the input, do not modify it, please
+# # split() helps to convert your input into a list
+# prices = input().split()
+
+# # please work with the list 'prices' here
+# print(prices[2])
+
+########################################################################################################################
+"""
+Indexe
+Calculator
+
+A calculator stores the result of the previous calculations in its memory as a list. You want to access the last 
+calculation, but you don't know how many calculations there were in total.
+
+Work with the calculations variable and print the last calculation.
+"""
+# # please, don't modify this variable
+# calculations = input().split()
+#
+# # complete the code
+# print(calculations[-1])
+
+########################################################################################################################
+"""
+Indexe
+Tail
+
+Sentences generally end with a certain punctuation mark: a period ., an exclamation point !, or a question mark ?.
+Find out which of these symbols marks the end of a string stored in the variable sentence and print it out.
+"""
+# sentence = input()
+#
+# # now print the last symbol of `sentence`
+# print(sentence[-1])
+
+########################################################################################################################
+"""
+Indexe
+Find an error
+
+Which line of code will cause an error?
+fruits = ["apple", "pear", "orange", "mango", "peach"]
+
+print(fruits[0])     # 3
+print(fruits[-5])    # 4
+print(fruits[5])     # 5
+print(fruits[4-2])   # 6
+
+    3
+    4
+X   5
+    6
+"""
+
+########################################################################################################################
+"""
+Indexe
+Sequence items
+
+Given the sequence seq, match its elements with corresponding indexes.
+the next-to-last element    len(seq) - 2
+the last element            len(seq) - 1
+the second element          -len(seq) + 1
+the first element           -len(seq)
+"""
+
+########################################################################################################################
+"""
+Indexe
+Modifying data
+
+Lists, unlike strings, are mutable. We can use that to modify their data with indexes.
+There is a list planets with the names of the Solar system planets. However, instead of the 5th planet, there's an X. 
+Replace it with the real name of the 5th planet. Do not forget, the first letter must be a capital one!
+Note that the list planets has already been defined, you just need to change one element. Mind its index!
+"""
+# # change the name of the 5th planet in planets
+# planets[4] = "Jupiter"
+
+########################################################################################################################
+"""
+Indexe
+Lucky tickets are a kind of mathematical entertainment. A ticket is considered lucky if the sum of the first 3 digits 
+equals the sum of the last 3 digits of the ticket number.
+
+You are supposed to write a program that checks whether the two sums are equal. The code snippet below displays "Lucky" 
+if they are and "Ordinary" if they are not.
+
+However, some parts of the code are missing. Fill in the blanks to make it work!
+
+Input: a string of 6 digits.
+
+Output: either "Lucky" or "Ordinary" (without quotes).
+
+Make sure that you are NOT concatenating strings. To do this, convert each digit in the ticket number to an integer. 
+Don't forget to use proper indices.
+"""
+# Save the input in this variable
+ticket = [int(item) for item in list(input())]
+
+# Add up the digits for each half
+# half1 = ticket[0] + ticket[1] + ticket[2]
+half1 = sum(ticket[0:3])
+
+# half2 = ticket[-1] + ticket[-2] + ticket[-3]
+half2 = sum(ticket[:-4:-1]) # on parcours en sens inverse la liste(-1) et on va du dernier element à l'element -3 il
+                            # faut mettre -4 car dans la borne sup. est toujours exclu
+
+print(half1, half2)
+
+# Thanks to you, this code will work
+if half1 == half2:
+    print("Lucky")
+else:
+    print("Ordinary")
 ########################################################################################################################
 """
 Work on project. Stage 1/4 Mini-calculator
