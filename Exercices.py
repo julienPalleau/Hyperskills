@@ -2664,6 +2664,158 @@ Don't forget to use proper indices.
 
 ########################################################################################################################
 """
+Nested lists
+A lot of nested lists
+
+Let's write a program that will read a positive integer n from the input and create a nested list containing the inner 
+list [1, 2] repeated n times.
+"""
+# n = int(input())
+# my_list = [[1, 2]]
+# print(my_list*n)
+
+########################################################################################################################
+"""
+Nested lists
+Accessing elements of a matrix
+
+Let's say we have a matrix M:
+M = [[34, 77, 8,  45],
+     [10, 15, 93, 57],
+     [78, 82, 19, 98]]
+     
+Write a code that will print the element in the first column and the third row. Mind that the size and the number of 
+elements in the test matrix will be the same, but the integers in it will be different.    
+"""
+# the variable M is already defined
+# M = [[34, 77, 8,  45],
+#      [10, 15, 93, 57],
+#      [78, 82, 19, 98]]
+#
+# print(M[2][0])
+
+########################################################################################################################
+"""
+Nested lists
+Double for
+Which of the following list comprehension will do the same as the code below?
+country_list = [["Moscow", "Cheboksary", "Sochi"], ["Paris", "Lyon", "Nice"],
+                ["New York", "Dallas", "San Francisco"]]
+
+long_cities = []
+for country in country_list:
+    for city in country:
+        if len(city) >= 6:
+            long_cities.append(city)
+            
+long_cities = [city if len(city) >= 6 for city in country for country in country_list]
+long_cities = [city for city in country for country in country_list if len(city) >= 6]
+long_cities = [city for country in country_list for city in country if len(city) >= 6]
+long_cities = [city if len(city) >= 6 for country in country_list for city in country]
+"""
+# country_list = [["Moscow", "Cheboksary", "Sochi"], ["Paris", "Lyon", "Nice"],
+#                 ["New York", "Dallas", "San Francisco"]]
+#
+# long_cities = [city for country in country_list for city in country if len(city) >= 6]
+
+########################################################################################################################
+"""
+Nested lists
+The length of a list
+Enter the length of the given list.
+numbers = [3, 4, [5, 1], 1, [7, 8]]
+
+>> 5
+"""
+
+########################################################################################################################
+"""
+Nested lists
+Length of a list
+What is the length of the list below?
+
+my_list = [1, [2, [3, 4]]] 
+print(len(my_list))
+>> 2
+"""
+# my_list = [1, [2, [3, 4]]]
+# print(len(my_list))
+
+########################################################################################################################
+"""
+Nested lists
+Choosing elements from nested lists
+Imagine that the list below shows a part of a cafe's menu where the first element in each nested list is the name of a 
+dish, the second element is the number of people the dish is aimed at, and the third number is its cost in the local 
+currency.
+
+menu = [["pizza", 4, 20], ["soup", 1, 8], ["ice cream", 2, 4], ["toasts", 2, 10]]
+
+Let's say a customer wants to select what to order using Python, and they have written the following code:
+
+what_to_order = [dish[0] for dish in menu if dish[1] >= 2 and dish[2] < 15]
+print(what_to_order)
+
+Which output will this expression yield?
+
+X   ["ice cream", "toasts"]
+    [["ice cream"], ["toasts"]]
+    [["ice cream", 2, 4], ["toasts", 2, 10]]
+    "ice cream", "toasts"
+"""
+
+########################################################################################################################
+"""
+Nested lists
+A very nested list
+
+Write a program that takes three strings as input and then constructs and prints a nested list from them – with first 
+string as a first element, a list containing only second string as a second element and a list containing another list 
+containing a third string as a third element.
+"""
+# str_1 = input()
+# str_2 = input()
+# str_3 = input()
+# result = [str_1, [str_2], [[str_3]]]
+# print(result)
+
+########################################################################################################################
+"""
+Nested lists
+Fill the blanks
+
+Below you can see the code that chooses some elements from one list and appends them to another:
+for a in x:
+    for el in a:
+        if el > 0:
+            els.append(el)
+            
+Fill in the blanks in the code below so that list comprehension produces the same result as the code above.
+
+# here we create the initial list from the input, please do not modify this line
+x = json.loads(input())
+
+els = [el for a in x for el in a if el > 0]
+"""
+
+########################################################################################################################
+"""
+Nested lists
+Problem of the day
+Conditions & nested lists
+"""
+# students = [["Jane", "B"], ["Kate", "B"], ["Alex", "C"], ["Elsa", "A"], ["Max", "B"], ["Chris", "A"]]
+# students = [a[0] for a in students if a[1] == "A"]
+# print(students)
+
+########################################################################################################################
+"""
+Nested lists
+Slicing
+"""
+
+########################################################################################################################
+"""
 List comprehension
 Else comprehension
 # the following line reads the list from the input, do not modify it, please
@@ -2938,10 +3090,6 @@ Given a list of words in the code below, create a list of lengths of those words
 #          "apothecary"]
 # print([len(word) for word in words])
 
-########################################################################################################################
-"""
-Nested lists
-"""
 
 ########################################################################################################################
 """
