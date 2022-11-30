@@ -8,6 +8,7 @@ Write a program that calculates the remainder of 10 divided by 3 and prints the 
 
 ########################################################################################################################
 import csv
+import string
 from typing import List
 
 import openpyxl
@@ -3627,6 +3628,330 @@ Given a list of words in the code below, create a list of lengths of those words
 #          "apothecary"]
 # print([len(word) for word in words])
 
+########################################################################################################################
+"""
+Dictionary
+Count the marks
+
+What will be printed out as a result of these actions?
+new_dict = {"a": 6, "b": 3}
+new_dict['a'] = new_dict['a'] / new_dict['b']
+print(new_dict['a'] + new_dict['b'])
+
+    5
+X   5.0
+    9.0
+    The error will occur
+    6
+"""
+
+########################################################################################################################
+"""
+Dictionary
+Create
+
+Let's say you asked your friends to name their favorite flowers: now you know that Alex likes 'field flowers', Kate 
+prefers 'daffodil', Eva adores 'artichoke flower', and Daniel loves 'tulip'.
+Create a dict with the names as keys and flowers as values and print it.
+"""
+# dict = {'Alex': 'field flowers', 'Kate': 'daffodil', 'Eva': 'artichoke flower', 'Daniel': 'tulip'}
+# print(dict)
+
+########################################################################################################################
+"""
+Dictionary
+Grocery list
+
+Alice is going to the store and she's writing a list of what she should buy. First, she didn't want to buy many bananas 
+but then she suddenly changed her mind. How can you help Alice and correctly update the value ofbananas in the following
+shopping_list?
+
+shopping_list = {'bananas': 5, 'oranges': 3, 'yogurt': 2, 'chicken breasts': 3, 'olive oil': 1}
+shopping_list.bananas = 10
+shopping_list['bananas'] = 10
+bananas['shopping_list'] = 10
+shopping_list[bananas] = 10
+
+    shopping_list.bananas = 10
+X   shopping_list['bananas'] = 10
+    bananas['shopping_list'] = 10
+    shopping_list[bananas] = 10
+"""
+
+########################################################################################################################
+"""
+Dictionary
+Let's count
+
+What will be the result of the code below:ple = {}
+sample['a'] = 3
+sample['b'] = 5
+sample['c'] = -2
+print(sample['a'] + sample['b'] + sample['c'])
+
+>> 6
+"""
+
+########################################################################################################################
+"""
+Dictionary
+Comprehension
+
+Choose all the possible ways to create a dictionary.
+Report a typo
+Select one or more options from the list
+empty_dict = []
+empty_dict = dict{}
+empty_dict = dict()
+empty_dict = {}
+
+    empty_dict = []
+    empty_dict = dict{}
+X   empty_dict = dict()
+X   empty_dict = {}
+"""
+
+########################################################################################################################
+"""
+Dictionary
+Nested
+
+Imagine there are three children in a family and they all wrote down what they want to be when they grow up:
+children = {'Emily': 'artist', 'Adam': 'astronaut', 'Nancy': 'programmer'}
+Let's say you want to store not only the profession they have chosen but also their age: Emily is 5, Adam is 9, and 
+Nancy is 14. To do so, you can create nested dictionaries for each key in the outer dictionary.
+For each name, create a nested dictionary with the keys 'profession' and 'age', modify the dictionary children, 
+but don't print it.
+NB: write the age as an integer.
+children = {'Emily': 'artist', 'Adam': 'astronaut', 'Nancy': 'programmer'}
+"""
+# # please work with the variable children
+# children = {'Emily': 'artist', 'Adam': 'astronaut', 'Nancy': 'programmer'}
+#
+# # please work with the variable children
+# children = {
+#     'Emily': {
+#         "profession": "artist",
+#         "age": 5},
+#     'Adam': {
+#         "profession": "astronaut",
+#         "age": 9},
+#     'Nancy': {
+#         "profession": "programmer",
+#         "age": 14}}
+
+########################################################################################################################
+"""
+Dictionary
+Update info
+
+Let's say you have a dict with children's names and professions they would like to have when they grow up:
+children = {'Emily': 'artist', 'Adam': 'astronaut', 'Nancy': 'programmer'}
+But what if someone's choice has changed? Say, Emily now wants to be a musician. Update the dict and print its new 
+version.
+"""
+# please work with the variable children
+# update the dict and print it
+# children = {'Emily': 'artist', 'Adam': 'astronaut', 'Nancy': 'programmer'}
+# children['Emily']='musician'
+# print(children)
+
+########################################################################################################################
+"""
+Dictionary
+Adding an item
+
+Let's say you have a dictionary matching your friends' names with their favorite flowers:
+fav_flowers = {'Alex': 'field flowers', 'Kate': 'daffodil', 'Eva': 'artichoke flower', 'Daniel': 'tulip'}
+Your new friend Alice likes orchid the most: add this info to the fav_flowers dict and print the dict.
+NB: Do not redefine the dictionary itself, just add the new element to the existing one.
+"""
+# please work with the variable fav_flowers
+# fav_flowers = {'Alex': 'field flowers', 'Kate': 'daffodil', 'Eva': 'artichoke flower', 'Daniel': 'tulip'}
+# fav_flowers['Alice'] = 'orchid'
+# print(fav_flowers)
+
+########################################################################################################################
+"""
+Dictionary methods
+Let's count
+
+What will be the result of the code below?
+sample = {}
+sample['a'] = 3
+sample['b'] = 5
+print(sample['a'] + sample['b'] + sample.get('c', -2) + sample.get('a', 10))
+
+>> 9
+"""
+
+########################################################################################################################
+"""
+Dictionary methods
+Big family
+
+It's a wedding day — two happy people are getting married.
+
+We have a dictionary first_family that contains the names of the wife's family members. For example:
+
+first_family = {"wife": "Janet", "wife's mother": "Katie", "wife's father": "George"}
+
+And a similar dictionary second_family for the husband's family:
+
+second_family = {"husband": "Leon", "husband's mother": "Eva", 
+                 "husband's father": "Gaspard", "husband's sister": "Isabelle"}
+
+Create a new dictionary that would contain information about the new family. Similar to the ones above, family members 
+should be keys and their names should be values. First, update the new dictionary with elements from first_family and 
+then from second_family. Don't forget to print it out.
+"""
+
+# new_family=dict()
+# first_family = {"wife": "Janet", "wife's mother": "Katie", "wife's father": "George"}
+# second_family = {"husband": "Leon", "husband's mother": "Eva", "husband's father": "Gaspard", "husband's sister": "Isabelle"}
+#
+# # Solution 1
+# new_family.update(first_family)
+# new_family.update(second_family)
+# print(new_family)
+#
+# # Solution 2
+# new_family_2 = {**first_family, **second_family}
+# print(new_family_2)
+########################################################################################################################
+"""
+Dictionary methods
+All hands on deck
+
+In a standard deck of cards, there are 13 of each suit. There are numbered cards (from 2 to 10) and face cards (Jack, 
+Queen, King, and Ace). If we were to rank the face cards, Jack would be 11, Queen 12, King 13, and the Ace 14.
+
+Write a program that calculates the average rank of one hand of cards. Don't forget to consider the rank of the face cards.
+
+The input format:
+Six values of cards, each on a separate line.
+
+The output format:
+The average rank of the hand.
+"""
+# # Solution 1
+# cards_value = {"0": 0, "1": 1, "2": 2, "3": 3, "4": 4, "5": 5, "6": 6, "7": 7, "8": 8, "9": 9, "10": 10, "Jack": 11,
+#                "Queen": 12, "King": 13, "Ace": 14}
+# sum = 0
+# counter = 0
+# cards = input().split()
+#
+# for card in cards:
+#     if card in ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "Jack", "Queen", "King", "Ace"]:
+#         sum += cards_value[card]
+#         counter += 1
+#
+# print(sum/counter)
+#
+# # Solution 2
+# card_deck = {'2': 2, '3': 3, '4': 4, '5': 5, '6': 6, '7': 7, '8': 8, '9': 9, '10': 10,
+#              'Jack': 11, 'Queen': 12, 'King': 13, 'Ace': 14}
+#
+# total = 0
+# for _ in range(6):
+#     card = input()
+#     total += card_deck[card]
+# print(total / 6)
+
+########################################################################################################################
+"""
+Dictionary methods
+The Double
+
+Write a program that creates a dictionary, in which keys are latin letters, and values are their doubling:
+{a: aa, b: bb, ..., z: zz}
+Save this dictionary in the variable double_alphabet
+"""
+# import string
+# double_alphabet = dict()
+# for letter in string.ascii_lowercase:
+#     double_alphabet[letter] = letter + letter
+
+########################################################################################################################
+"""
+Dictionary methods
+Last
+
+We have the following code:
+
+student = {'name': 'Kate', 'age': 20, 'specialty': 'biology'}
+student.update(degree='bachelor')
+print(student.get('age'))
+print(student.pop('specialty'))
+print(student.popitem())
+
+This program will print several lines. What will the last one be?
+student = {'name': 'Kate', 'age': 20, 'specialty': 'biology'}
+student.update(degree='bachelor')
+print(student.get('age'))
+print(student.pop('specialty'))
+print(student.popitem())
+
+X   ('degree', 'bachelor')
+    {'specialty': 'biology'}
+    'biology'
+    'bachelor'
+"""
+
+########################################################################################################################
+"""
+Dictionary methods
+Cleaning
+
+Tom is learning dictionaries in Python. Here are the dictionaries he has created:
+
+first_dict = {'key1': 'value1', 'key2': 'value2'}
+second_dict = first_dict
+third_dict = second_dict
+
+Below there's a table with several lines of code on the left. Match them to their output. 
+	                    {}	        {'key1': 'value1', 'key2': 'value2'}
+
+first_dict.clear()      x
+print(third_dict)
+
+second_dict = {}                        x
+print(third_dict)
+"""
+
+########################################################################################################################
+"""
+Dictionary methods
+Delete
+
+What are the correct ways to delete an existing key from the dictionary? Choose one or several options.
+ Select one or more options from the list 
+del my_dict[key]
+remove "key" from my_dict
+my_dict.pop(my_dict["key"])
+my_dict.delete("key")
+
+X   del my_dict[key]
+    my_dict.pop(my_dict["key"])
+    remove "key" from my_dict
+    my_dict.delete("key")
+"""
+
+########################################################################################################################
+"""
+Dictionary methods
+Delete from squares
+
+We have a dictionary squares which contains numbers as keys and their squares as values. It looks like this:
+
+squares = {1: 1, 3: 9, 5: 25, ...}
+
+Your task is to read the input as a key that needs to be deleted from the dictionary and print the value of this key. 
+If the number read from the input does not exist in the dictionary, then you need to print There is no such key. 
+Finally, print the squares dictionary on the next line after all the changes.
+
+The dictionary squares is already defined for you.
+"""
 
 ########################################################################################################################
 """
