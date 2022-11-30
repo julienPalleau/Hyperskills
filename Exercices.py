@@ -2460,8 +2460,8 @@ So, if input_str, for example, contains a string "python", your program should t
 """
 List
 Syntax for the list
-How to create a list containing numbers?
 
+How to create a list containing numbers?
     (1, 2, 3, 4, 5)
     {1, 2, 3, 4, 5}
     list(1, 2, 3, 4, 5)
@@ -2471,7 +2471,172 @@ X   [1, 2, 3, 4, 5]
 
 ########################################################################################################################
 """
-Indexe
+Operation with list
+Merging lists
+
+Write a function that would take two lists and return one merged list, e.g. for the lists 
+['Washington, D.C.', 'Chicago', 'New York'] and ['Los Angeles', 'Las Vegas'] 
+the result should be ['Washington, D.C.', 'Chicago', 'New York', 'Los Angeles', 'Las Vegas'].
+
+You can use any of the methods described in the theory. Don't print the merged list, just return it at the end of the 
+function.
+"""
+# list_one = ['Washington, D.C.', 'Chicago', 'New York']
+# list_two = ['Los Angeles', 'Las Vegas']
+# def merge_lists(list_one, list_two):
+#     return list_one + list_two
+# print(merge_lists(list_one, list_two))
+
+########################################################################################################################
+"""
+Operation with list
+The sequence of operations
+
+Given a list with several numbers:
+numbers = [2, 2, 4, 1, 1, 3, 5]
+Here is a sequence of operations performed on this list:
+numbers.remove(1)
+numbers.extend([0])
+numbers.append(len(numbers))
+numbers.remove(5)
+numbers.append(5)
+What does the result list look like?
+
+    [5, 7, 0, 2, 4, 1, 3, 5]
+    [2, 2, 4, 3, 0, 6, 5]
+    [[0], 2, 2, 4, 1, 3, 7, 5]
+X   [2, 2, 4, 1, 3, 0, 7, 5]
+"""
+
+########################################################################################################################
+"""
+Operation with list
+From one list to another
+
+Which method can add all elements from one list to another within a single operation?
+    append()
+X   extend()
+    insert()
+    add()
+"""
+
+########################################################################################################################
+"""
+Operation with list
+Appending and inserting elements 
+
+What will be the output of the following code?
+letters = ['a', 'b']
+letters.append('c')
+letters.insert(1, 'd')
+letters.insert(2, 'e')
+letters.append('f')
+print(letters)
+
+    ['d', 'e', 'c', 'f']
+X   ['a', 'd', 'e', 'b', 'c', 'f']
+    ['a', 'b', 'c', 'd', 'e', 'f']
+    ['d', 'a', 'e', 'b', 'c', 'f']
+    ['d', 'e', 'a', 'b', 'c', 'f']
+
+"""
+
+########################################################################################################################
+"""
+Operation with list
+Adding and removing elements
+
+What will be the output of the following code?
+my_list = [0, 1, 2, 1, 2]
+my_list.append(0)
+my_list.remove(2)
+my_list.append(1)
+my_list.remove(0)
+print(my_list)
+
+    [0, 1, 2, 1, 1]
+    [0, 1, 1, 0, 2]
+X   [1, 1, 2, 0, 1]
+    [1, 1, 0, 2, 1]
+"""
+
+########################################################################################################################
+"""
+Operation with list
+List membership
+
+Write down the name of the variable (type_1 or type_2) that should be placed instead of three dots to result in True 
+value of the membership test.
+container_types = ['list', 'set', 'dict', 'string']
+type_1 = 'bool'
+type_2 = 'list'
+print(... in container_types)
+>> type_2
+"""
+# container_types = ['list', 'set', 'dict', 'string']
+# type_1 = 'bool'
+# type_2 = 'list'
+# print(type_2 in container_types)
+
+########################################################################################################################
+"""
+Operation with list
+Shopping list
+
+She wrote down things that she would like to buy at the grocery store. All of these things are in the given 
+shopping_list variable, it has already been created.
+
+When sneaking a look at the fridge, she noticed that there was some milk left and changed her mind about buying a new 
+one. It got crossed out of the list. And, finally, she added a "brownie", and it became the last item Ruth had put on 
+the list.
+
+Now you try to remove "milk" from the given variable shopping_list, and add "brownie" to it.
+
+DON'T print the results.
+"""
+# shopping_list = []
+# shopping_list.remove("milk")
+# shopping_list.append("brownie")
+
+########################################################################################################################
+"""
+Operation with list
+Delete it!
+
+Let's say there's a list values = ['delete me', 'do not', 'delete me'].
+What are the correct ways to delete the first element?
+
+X   values.pop('delete me')
+    values.del(0)
+    values.remove('delete me')
+    values.pop()
+X   del values[0]
+    values.remove(0)
+
+"""
+
+########################################################################################################################
+"""
+Operation with list
+Matching results
+
+There's a list with student's grades during a semester: grades = [8, 5, 7, 9, 8, 6, 5, 7, 6, 7, 8, 8, 7, 9]. Compute 
+the expressions on the left to their results on the right.
+
+10 in grades                False
+grades.index(8, 6, 10)      ValueError
+grades.index(7, 5)          7
+grades.count(5)             2
+"""
+# grades = [8, 5, 7, 9, 8, 6, 5, 7, 6, 7, 8, 8, 7, 9]
+# print(10 in grades)
+# # print(grades.index(8, 6, 10))
+# print(grades.index(7, 5))
+# print(grades.count(5))
+########################################################################################################################
+
+"""
+List Index
 Error indexes
 
 What lines are correct and do not throw an error?
@@ -2484,7 +2649,7 @@ X   [1, 2, 3, 4][3]
 
 ########################################################################################################################
 """
-Indexe
+List Index
 Different alphabets
 
 We have created a variable alphabet for lowercase alphabets of different languages. Your task is to print the 15th 
@@ -2497,7 +2662,7 @@ letter of this string.
 
 ########################################################################################################################
 """
-Indexe
+List Index
 Guess the outcome
 
 Guess what happens when we run the code below:
@@ -2512,7 +2677,7 @@ X   IndexError
 
 ########################################################################################################################
 """
-Indexe
+List Index
 The syntax
 
 What is the syntax for accessing an element of a list by an index?
@@ -2525,7 +2690,7 @@ X   list[index]
 
 ########################################################################################################################
 """
-Indexe
+List Index
 Initials
 
 Find the first letter of a person's name and print it out.
@@ -2539,7 +2704,7 @@ Make use of the variable name that stores a string.
 
 ########################################################################################################################
 """
-Indexe
+List Index
 Find the third number
 
 The list prices contains several numbers. Print the third number from this list.
@@ -2554,7 +2719,7 @@ For example, if prices looks like [170, 309, 224, 991, 4000], you should print 2
 
 ########################################################################################################################
 """
-Indexe
+List Index
 Calculator
 
 A calculator stores the result of the previous calculations in its memory as a list. You want to access the last 
@@ -2570,7 +2735,7 @@ Work with the calculations variable and print the last calculation.
 
 ########################################################################################################################
 """
-Indexe
+List Index
 Tail
 
 Sentences generally end with a certain punctuation mark: a period ., an exclamation point !, or a question mark ?.
@@ -2583,7 +2748,7 @@ Find out which of these symbols marks the end of a string stored in the variable
 
 ########################################################################################################################
 """
-Indexe
+List Index
 Find an error
 
 Which line of code will cause an error?
@@ -2602,7 +2767,7 @@ X   5
 
 ########################################################################################################################
 """
-Indexe
+List Index
 Sequence items
 
 Given the sequence seq, match its elements with corresponding indexes.
@@ -2614,7 +2779,7 @@ the first element           -len(seq)
 
 ########################################################################################################################
 """
-Indexe
+List Index
 Modifying data
 
 Lists, unlike strings, are mutable. We can use that to modify their data with indexes.
@@ -2627,7 +2792,7 @@ Note that the list planets has already been defined, you just need to change one
 
 ########################################################################################################################
 """
-Indexe
+List Index
 Lucky tickets are a kind of mathematical entertainment. A ticket is considered lucky if the sum of the first 3 digits 
 equals the sum of the last 3 digits of the ticket number.
 
@@ -2699,6 +2864,7 @@ elements in the test matrix will be the same, but the integers in it will be dif
 Nested lists
 Double for
 Which of the following list comprehension will do the same as the code below?
+
 country_list = [["Moscow", "Cheboksary", "Sochi"], ["Paris", "Lyon", "Nice"],
                 ["New York", "Dallas", "San Francisco"]]
 
@@ -2723,8 +2889,8 @@ long_cities = [city if len(city) >= 6 for country in country_list for city in co
 Nested lists
 The length of a list
 Enter the length of the given list.
-numbers = [3, 4, [5, 1], 1, [7, 8]]
 
+numbers = [3, 4, [5, 1], 1, [7, 8]]
 >> 5
 """
 
@@ -2750,14 +2916,10 @@ dish, the second element is the number of people the dish is aimed at, and the t
 currency.
 
 menu = [["pizza", 4, 20], ["soup", 1, 8], ["ice cream", 2, 4], ["toasts", 2, 10]]
-
 Let's say a customer wants to select what to order using Python, and they have written the following code:
-
 what_to_order = [dish[0] for dish in menu if dish[1] >= 2 and dish[2] < 15]
 print(what_to_order)
-
 Which output will this expression yield?
-
 X   ["ice cream", "toasts"]
     [["ice cream"], ["toasts"]]
     [["ice cream", 2, 4], ["toasts", 2, 10]]
@@ -2768,7 +2930,6 @@ X   ["ice cream", "toasts"]
 """
 Nested lists
 A very nested list
-
 Write a program that takes three strings as input and then constructs and prints a nested list from them – with first 
 string as a first element, a list containing only second string as a second element and a list containing another list 
 containing a third string as a third element.
@@ -2783,18 +2944,14 @@ containing a third string as a third element.
 """
 Nested lists
 Fill the blanks
-
 Below you can see the code that chooses some elements from one list and appends them to another:
 for a in x:
     for el in a:
         if el > 0:
-            els.append(el)
-            
+            els.append(el)            
 Fill in the blanks in the code below so that list comprehension produces the same result as the code above.
-
 # here we create the initial list from the input, please do not modify this line
 x = json.loads(input())
-
 els = [el for a in x for el in a if el > 0]
 """
 
@@ -2810,9 +2967,389 @@ Conditions & nested lists
 
 ########################################################################################################################
 """
-Nested lists
-Slicing
+List Slicing
+Theory
 """
+# text = 'hello'
+# print(text[0:999])
+#
+# snakes = ['python', 'cobra', 'viper']
+# print(snakes[2][2:])
+"""
+>> hello
+>> per
+"""
+
+########################################################################################################################
+"""
+List Slicing
+You've got mail!
+
+Email addresses usually have the same structure: someone@somewhere.com (or any other domain).
+You are working with a database of email addresses from an imaginary email service yougotmail.com. Create a program 
+that would separate the local-part that precedes the @ sign from the rest of the address.
+The input format:
+The email address. It is stored in the variable email, you do not need to work directly with input.
+The output format:
+The local-part of the address.
+"""
+# email = 'someone@yougotmail.com'
+# result = email.split('@')
+# print(result[0])
+#
+# email = 'john.andrew.smith@yougotmail.com'
+# result = email.split('@')
+# print(result[0])
+
+########################################################################################################################
+"""
+List Slicing
+How to reverse a string
+Here is a string written in Python:
+
+s = "wolf"
+
+How can you reverse it using slicing?
+    s[-1::]
+    s[:-1]
+    s[-1:1]
+X   s[::-1]
+"""
+
+########################################################################################################################
+"""
+List Slicing
+Email
+
+Here is a string representing an email:
+
+email = 'python@hyper.skill'
+What is a result of this slicing operation?
+email[3:-3:3]
+X   'h@p.'
+    'hnhprs'
+    'hi'
+    'thyrk'
+
+"""
+
+########################################################################################################################
+"""
+List Slicing
+Slice length
+
+What is the output of the following code?
+len([8, 18, 28, 38, 48, 58, 68, 78, 88][-6:-2:3])
+    0
+    1
+X   2
+    3
+"""
+# print([8, 18, 28, 38, 48, 58, 68, 78, 88][-6:-2:3])
+# print(len([8, 18, 28, 38, 48, 58, 68, 78, 88][-6:-2:3]))
+
+########################################################################################################################
+"""
+List Slicing
+All 5
+
+We have created a list of integers called numbers. Use this list to create a new one in which all the integers are 
+divisible by 5. Print it.
+numbers = [5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20,
+           21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 
+           36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 
+           51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 
+           66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80,
+           81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 
+           96, 97, 98, 99, 100]
+"""
+# numbers = [5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20,
+#            21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35,
+#            36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50,
+#            51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65,
+#            66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80,
+#            81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95,
+#            96, 97, 98, 99, 100]
+# new_list = numbers[::5]
+# print(new_list)
+
+########################################################################################################################
+"""
+List Slicing
+Big index
+
+Let's say we have a list series = ['Game of Thrones', 'Riverdale', 'Shameless', 'Doctor Who', 'Friends'].
+What will be the result of the following expression: print(series[3:5])?
+
+    ['Shameless', 'Doctor Who', 'Friends']
+    There will be an error
+    ['Doctor Who', 'Friends']
+X   ['Doctor Who', 'Friends', '']
+"""
+# series = ['Game of Thrones', 'Riverdale', 'Shameless', 'Doctor Who', 'Friends']
+# print(series[3:5])
+
+########################################################################################################################
+"""
+List Slicing
+Palindrome check
+
+To find out if a word is a palindrome we would need to check if it reads the same forward and backward.
+The condition for that check has already been written in the code below, but the parts that need to be compared haven't 
+been defined yet. Finish the code by defining variables forward and backward.
+The variable that stores the word in question is called word. 
+"""
+# word = input()
+# forward = word[:]
+# backward = word[::-1]
+# print(forward, backward)
+# if forward == backward:
+#     print("Yes")
+# else:
+#     print("No")
+
+########################################################################################################################
+"""
+List Slicing
+Default values
+
+Here is the full syntax for slicing:
+sequence[start:stop:step]
+What are the default values for start, stop and step?
+
+X   start: 0
+start: 1
+X   stop: len(sequence)
+stop: len(sequence) - 1
+step: 0
+X   step: 1
+"""
+
+########################################################################################################################
+"""
+List Slicing
+Understanding different forms
+
+Match different forms of slicing with their descriptions.
+sequence[start:]    makes the full copy of the sequence
+sequence[:end]      takes elements from start to end-1
+sequence[::step]    takes all elements with a given step
+sequence[:]         takes elements from start to the last element
+
+Solution:
+sequence[start:]    takes elements from start to the last element
+sequence[:end]      takes elements from start to end-1
+sequence[::step]    takes all elements with a given step
+sequence[:]         makes the full copy of the sequence
+"""
+
+########################################################################################################################
+"""
+List Slicing
+Quotation marks
+
+Given a string in quotes, print it out without quotation marks.
+ Sample Input 1:
+"python"
+
+Sample Output 1:
+python
+"""
+# # work with this variable
+# string = input()
+# print(string[1:-1])
+
+########################################################################################################################
+"""
+Sorting a List
+Which method did it?
+
+Select the operation(s) below that can turn this list:
+numbers = [1, 6, -9, 2.5, 4, 0]
+into this:
+[6, 4, 2.5, 1, 0, -9]
+within a single operation.
+
+    sorted_numbers = sorted(numbers)
+    numbers.sort(reverse=False)
+    sorted_numbers = reversed(numbers)
+X   numbers.sort(reverse=True)
+X   sorted_numbers = sorted(numbers, reverse=True)
+    numbers.reverse()
+"""
+
+########################################################################################################################
+"""
+Sorting a List
+Can’t sort my list!
+
+Nathan has a list that contains the names of all his friends. He wants to sort it in alphabetical order and then print 
+it. However, when he executes this code:
+my_list = ['Mary', 'Bob', 'Pete', 'Jane']
+my_list = my_list.sort()
+print(my_list)
+only None is printed! Help him – find a broken line in his code, fix it and write down the corrected line.
+my_list.sort()
+"""
+# my_list = ['Mary', 'Bob', 'Pete', 'Jane']
+# my_list.sort()
+# print(my_list)
+
+########################################################################################################################
+"""
+Sorting a List
+Gaming task
+
+Little Niki played with toys and put them into a list to keep track of them.
+toys = ['Marinet', 'Toby', 'Kitty']
+Then, she decided to add another toy, named "Chubby", after which she sorted the list. As a result, she got the 
+following:
+['Toby', 'Kitty', 'Chubby', 'Marinet']
+Unfortunately, Niki forgot to save the code. Restore it to get the same result!
+The input you will get is a list of four toy names, including "Chubby". You should sort the list and print it. Pay 
+attention to the sorting function!
+"""
+# # the following line reads the list from the input, do not modify it, please
+# toys = input().split()
+#
+# # your code below
+# toys.sort(key=len)
+# print(toys)
+
+########################################################################################################################
+"""
+Sorting a List
+Unsortable!
+
+Select a list that can’t be sorted via sort() method.
+    [1, 2, 3, 4, 5, 6]
+    [1, 6, -9, 2.5, 4]
+    ['!!!', "Aaa", "Aab", 'foo', 'bar', "foobar"]
+X   [5, 1, -2, "45", 0]
+"""
+
+########################################################################################################################
+"""
+Sorting a List
+Sort the flowers
+
+Mrs. Smith works in a flower shop. Here you can see a table with the flower prices:
+flower 	price, $
+rose 	0.75
+lily 	1.3
+tulip 	1
+hyacinth 	0.70
+
+Mrs. Smith needs to sort prices in the descending order. Write a program to help her!
+The input you will get is a list of numbers, e.g. [0.75, 1.3, 1, 0.70]. The result should be this list sorted in the 
+descending order, [1.3, 1, 0.75, 0.7] for the example above. Please print the sorted list in the end.
+"""
+# # the following line creates a list from the input, do not modify it, please
+# prices = [float(price) for price in input().split()]
+# # your code below
+# prices.sort(reverse=True)
+# print(prices)
+
+########################################################################################################################
+"""
+Sorting a List
+Sort numbers by the remainder
+
+You are given a list of numbers nums. Sort the list by the remainder of dividing by three and print the result. Use a 
+lambda function as key if possible.
+"""
+# nums = [int(num) for num in list(input())]
+#
+# # write your code here
+# nums.sort(key=lambda x: x % 3)
+# print(nums)
+
+########################################################################################################################
+"""
+Sorting a List
+Sort the numbers
+
+Below you can see a list of strings called numbers. Sort it in the descending order as strings (alphabetically) and 
+print the resulting list.
+"""
+numbers = ["77", "145", "987", "2095", "6", "371", "4999", "81"]
+
+# # sort numbers
+# numbers.sort(reverse=True)
+# print(numbers)
+
+########################################################################################################################
+"""
+Sorting a list
+Pass the password
+
+Tim chooses a password for social networks so that it be difficult to crack. He wrote down the options in a list:
+
+passwords = ['0vbno0re', 'ad12', 'fgghut', '4qp', 'qwerty']
+
+Now, he wants to determine the level of their security depending on the length. A password that has a length of 1 is 
+the most unsafe one, while a password of length 10 is considered the best one.
+
+Given a list of passwords, sort them from the least safe to the safest one. As the output, print all passwords together 
+with their length. For the example above, you should print:
+
+4qp 3
+ad12 4
+fgghut 6
+qwerty 6
+0vbno0re 8
+"""
+# # the follwing line reads the list from the input, do not modify it, please
+# passwords = input().split()
+#
+# # your code below
+# passwords.sort(key=len)
+# for password in passwords:
+#     print(password, len(password))
+#
+# # Solution 2
+# for password in sorted(passwords, key=len):
+#     print(password, len(password))
+
+########################################################################################################################
+"""
+Sorting a list
+Changed beyond recognition
+
+Dany created the following list:
+
+dragons = ['Rudy', 'Targent', 'Aggie']
+
+and then played with it for a while. She performed some operations on it, so the result looks like this:
+
+['Targent', 'Aggie', 'Rudy']
+
+Now Dany is confused and wants to understand what exactly she has done. Help her out! Place the operations in the 
+correct order – the order in which they were used to get ['Targent', 'Aggie', 'Rudy'] from ['Rudy', 'Targent', 'Aggie'].
+dragons = sorted(dragons, key=len)
+dragons.reverse()
+dragons.sort()
+
+Solution
+dragons.sort()
+dragons = sorted(dragons, key=len)
+dragons.reverse()
+"""
+
+########################################################################################################################
+"""
+Sorting a list
+Maximum and minimum
+
+Write a program that receives three integers as input and prints them in the following order: the maximum, the minimum, 
+and then the remaining number, all in one line. Note that there can be duplicate numbers in the input.
+"""
+# # the following code creates a list from input, please do not modify it
+# ints = [int(num) for num in input().split()]
+#
+# # your solution here
+# max_list = sorted(ints, reverse=True)
+# print(max_list[0], max_list[2], max_list[1])
 
 ########################################################################################################################
 """
