@@ -2050,7 +2050,6 @@ with open('years.txt', 'w', encoding='utf-8') as f:
     f.write('2020')
 """
 
-
 ########################################################################################################################
 """
 Context manager
@@ -3975,17 +3974,229 @@ meals = [
         {"title": "Curd souffle with lingonberries and ginger", "kcal": 225},
         {"title": "Oatmeal with honey and peanuts", "kcal": 440}]
 """
-meals = [
-        {"title": "Oatmeal pancakes with apple and cinnamon", "kcal": 370},
-        {"title": "Italian salad with fusilli and ham", "kcal": 320},
-        {"title": "Bulgur with vegetables", "kcal": 350},
-        {"title": "Curd souffle with lingonberries and ginger", "kcal": 225},
-        {"title": "Oatmeal with honey and peanuts", "kcal": 440}]
+# meals = [
+#         {"title": "Oatmeal pancakes with apple and cinnamon", "kcal": 370},
+#         {"title": "Italian salad with fusilli and ham", "kcal": 320},
+#         {"title": "Bulgur with vegetables", "kcal": 350},
+#         {"title": "Curd souffle with lingonberries and ginger", "kcal": 225},
+#         {"title": "Oatmeal with honey and peanuts", "kcal": 440}]
+#
+# calories = 0
+# for line in meals:
+#     calories += line["kcal"]
+# print(calories)
 
-calories = 0
-for line in meals:
-    calories += line["kcal"]
-print(calories)
+########################################################################################################################
+"""
+Operations with dictionary
+Dictionary membership
+
+Replace the dots with membership operators so that the output result would always be True.
+
+sidekicks = {'Don Quixote': 'Sancho Panza', 'Batman': 'Robin', 'Holmes': 'Watson'}
+print('Sancho Panza' ... sidekicks)
+print('Batman' ... sidekicks)
+print('Han Solo' ... sidekicks)
+print('' ... sidekicks)
+
+Solution
+sidekicks = {'Don Quixote': 'Sancho Panza', 'Batman': 'Robin', 'Holmes': 'Watson'}
+print('Sancho Panza' in sidekicks.values())
+print('Batman' in sidekicks)
+print('Han Solo' not in sidekicks)
+print('' not in sidekicks)
+"""
+
+########################################################################################################################
+"""
+Operations with dictionary
+Keys and values
+
+What's the difference between keys, values, items dictionary methods? Match the methods with their possible output based
+ on the following dictionary:
+random_dict = {'a': 20, 'b': 40, 'c': 60, 'd': 80, 'e': 100}
+Note that there's one extra option.
+
+Solution
+random_dict.keys()      ['a', 'b', 'c', 'd', 'e']
+random_dict.values()    [20, 40, 60, 80, 100]
+random_dict.items()     [('a', 20), ('b', 40), ('c', 60), ('d', 80), ('e', 100)]
+Extra option            ['20', '40', '60', '80', '100']
+
+X       False
+        True
+        KeyError
+        None
+"""
+
+########################################################################################################################
+"""
+Operations with dictionary
+Choose the result
+
+When dealing with dict.keys(), you can use some operations for combining them. For instance, & will denote the 
+intersection of dictionary keys even if their values are different. Have a look at the code below. What is the right 
+output?
+
+tim_toys = {'teddy bear': 3, 'toy car': 5, 'lion': 7, 'puppy': 5}
+tom_toys = {'doll': 3, 'puppy': 2, 'kitten': 4, 'teddy bear': 3}
+print(tim_toys.keys() & tom_toys.keys())
+
+Solution
+X       {'teddy bear', 'puppy'}
+        {'teddy bear'}
+        {'puppy'}
+        {'doll', 'toy car'}
+"""
+
+########################################################################################################################
+"""
+Operations with dictionary
+Upper and lower
+
+A some_iterable stores words from a sentence. Use dictionary comprehension to create a new dictionary, in which keys 
+will be words from some_iterable, written in uppercase letters, and values will be the same words written in lowercase 
+letters. Print this dictionary.
+
+ Sample Input 1:
+Great loves too must be endured.
+
+ Sample Output 1:
+{'GREAT': 'great', 'LOVES': 'loves', 'TOO': 'too', 'MUST': 'must', 'BE': 'be', 'ENDURED.': 'endured.'}
+
+# the list with words from string
+# please, do not modify it
+some_iterable = input().split()
+
+# use dictionary comprehension to create a new dictionary
+"""
+# # the list with words from string
+# # please, do not modify it
+# some_iterable = input().split()
+#
+# # use dictionary comprehension to create a new dictionary
+# dictionary = {key.upper(): key.lower() for key in some_iterable}
+# print(dictionary)
+
+########################################################################################################################
+"""
+Operations with dictionary
+Long fruit
+
+We have the following list fruits = ['apple', 'kiwi', 'banana', 'orange', 'apricot']. Choose the correct line of code 
+which will form a dictionary like this:
+    key: fruit name;
+    value: number of letters in the fruit name.
+Moreover, the new dictionary should only include names longer than 5 characters.
+
+Solution
+X       fruits_dict = {element: len(element) for element in fruits if len(element) > 5}
+        fruits_dict = {key: len(element) for key, element in fruits.items() if len(element) > 5}
+        fruits_dict = {element: len(element) if len(element) > 5 for element in fruits}
+        fruits_dict = {element: len(element) for element in fruits.values() if len(element) > 5}
+"""
+
+########################################################################################################################
+"""
+Operations with dictionary
+Dating App
+
+There's a list with info about people who search for a date. For each person, a few parameters are specified: their 
+gender, age, hobbies, and city.
+
+potential_dates = [{"name": "Julia", "gender": "female", "age": 29,
+                    "hobbies": ["jogging", "music"], "city": "Hamburg"},
+                   {"name": "Sasha", "gender": "male", "age": 18,
+                    "hobbies": ["rock music", "art"], "city": "Berlin"}, 
+                   {"name": "Maria", "gender": "female", "age": 35,
+                    "hobbies": ["art"], "city": "Berlin"},
+                   {"name": "Daniel", "gender": "non-conforming", "age": 50,
+                    "hobbies": ["boxing", "reading", "art"], "city": "Berlin"}, 
+                   {"name": "John", "gender": "male", "age": 41,
+                    "hobbies": ["reading", "alpinism", "museums"], "city": "Munich"}]
+
+Help a new user write a function that selects from the given list people older than 30, interested in art, and living 
+in Berlin. The function should return their names as a string, separated by a comma and a space, e.g. "Maria, Daniel" 
+for the example list above.
+"""
+# potential_dates = [{"name": "Julia", "gender": "female", "age": 29,
+#                     "hobbies": ["jogging", "music"], "city": "Hamburg"},
+#                    {"name": "Sasha", "gender": "male", "age": 18,
+#                     "hobbies": ["rock music", "art"], "city": "Berlin"},
+#                    {"name": "Maria", "gender": "female", "age": 35,
+#                     "hobbies": ["art"], "city": "Berlin"},
+#                    {"name": "Daniel", "gender": "non-conforming", "age": 50,
+#                     "hobbies": ["boxing", "reading", "art"], "city": "Berlin"},
+#                    {"name": "John", "gender": "male", "age": 41,
+#                     "hobbies": ["reading", "alpinism", "museums"], "city": "Munich"}]
+#
+#
+# def select_dates(potential_dates):
+#     result = list()
+#     for member in potential_dates:
+#         if member["age"] > 30:
+#             if "art" in member["hobbies"]:
+#                 if member["city"] == "Berlin":
+#                     result.append(member["name"])
+#     return ", ".join(result)
+#
+#
+# print(select_dates(potential_dates))
+
+########################################################################################################################
+"""
+Operations with dictionary
+Extreme Points
+
+Write a program that prints keys for the minimum and maximum values of the dictionary.
+
+You are supposed to work with the variable test_dict which is a dictionary.
+
+Sample output for the dictionary {"a": 43, "b": 1233, "c": 8} should be as follows:
+
+min: c
+max: b
+"""
+import json
+
+# The following line creates a dictionary from the input. Do not modify it, please
+test_dict = json.loads(input())
+
+# Work with the 'test_dict'
+# Solution 1
+max_value = 0
+min_value = 1000000
+# for key, value in test_dict.items():
+#     if value >= max_value:
+#         max_value = value
+#         max_key = key
+#     elif value < min_value:
+#         min_value = value
+#         min_key = key
+# print(f"min: {min_key}")
+# print(f"max: {max_key}")
+# # Solution 2
+# print(f' min: {min(test_dict, key=test_dict.get)}')
+# print(f' max: {max(test_dict, key=test_dict.get)}')
+
+
+########################################################################################################################
+"""
+Operations with dictionary
+Test result for capitals
+
+What will be the result of the membership test in the last line of the code?
+capitals = {'China': 'Beijing', 'United Kingdom': 'London', 'Nigeria': 'Abuja', 'Nauru': ''}
+print('' in capitals)
+
+Solution
+"""
+
+########################################################################################################################
+"""
+Set
+
+"""
 
 ########################################################################################################################
 """
