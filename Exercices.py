@@ -4157,25 +4157,25 @@ Sample output for the dictionary {"a": 43, "b": 1233, "c": 8} should be as follo
 min: c
 max: b
 """
-import json
-
-# The following line creates a dictionary from the input. Do not modify it, please
-test_dict = json.loads(input())
-
-# Work with the 'test_dict'
-# Solution 1
-max_value = 0
-min_value = 1000000
-# for key, value in test_dict.items():
-#     if value >= max_value:
-#         max_value = value
-#         max_key = key
-#     elif value < min_value:
-#         min_value = value
-#         min_key = key
-# print(f"min: {min_key}")
-# print(f"max: {max_key}")
-# # Solution 2
+# import json
+#
+# # The following line creates a dictionary from the input. Do not modify it, please
+# test_dict = json.loads(input())
+#
+# # Work with the 'test_dict'
+# # Solution 1
+# max_value = 0
+# min_value = 1000000
+# # for key, value in test_dict.items():
+# #     if value >= max_value:
+# #         max_value = value
+# #         max_key = key
+# #     elif value < min_value:
+# #         min_value = value
+# #         min_key = key
+# # print(f"min: {min_key}")
+# # print(f"max: {max_key}")
+# # # Solution 2
 # print(f' min: {min(test_dict, key=test_dict.get)}')
 # print(f' max: {max(test_dict, key=test_dict.get)}')
 
@@ -4195,8 +4195,142 @@ Solution
 ########################################################################################################################
 """
 Set
+Easy calculations
 
+Let's suppose we have 13 cats (and a very big house certainly), 3 dogs, 2 turtles, and a lizard. Then we decide to mix 
+this gorgeous company up a bit and buy a parrot. Question: if we use Python for making a set of these pets 
+(not their names), how many elements will the new set consist of?
+
+>> 5
 """
+
+########################################################################################################################
+"""
+Set
+Format checks
+
+Choose the right variant:
+The set's elements are...
+
+    ordered and immutable.
+    none of the variants.
+    ordered and mutable.
+X   unordered and hashable. 
+"""
+
+########################################################################################################################
+"""
+Set
+Letters
+
+Write a program that calculates how many distinct letters the input word has. The word is stored in the variable word. 
+Print out the result you'll get.
+Sample Input 1: 
+mississippi
+Sample Output 1: 
+4
+"""
+# word = input()  # the input word
+# print(len(set(word)))
+
+########################################################################################################################
+"""
+Set
+Keeping up with methods
+
+Fill in the missing word.
+To remove all elements from the set you need to use...method.
+X   clear()
+    remove()
+    delete()
+    discard()
+"""
+
+########################################################################################################################
+"""
+Set
+True or false?
+
+What will be the output of the following piece of code? Don't use the Python console.
+set1 = {'oatmeal', 'millet', 'rice', 'semolina', 'buckwheat'}
+set2 = {'oatmeal', 'ric', 'semolina', 'millet', 'buckwheat'}
+print(set1 == set2)
+
+Solution
+> False
+"""
+
+########################################################################################################################
+"""
+Set
+Frozenset constraints
+
+What operations can NOT be performed on a frozenset?
+add() method
+discard() method
+len() function
+get all elements using a for loop
+clear() method
+
+Solution
+X   add() method
+X   discard() method
+    len() function
+    get all elements using a for loop
+X   clear() method
+"""
+
+########################################################################################################################
+"""
+Set
+Mystery set
+
+There is an unknown set of objects named mystery_set which has been predefined. You don't have access to this set.
+Write a program that deletes the input string (stored in the variable string) from the mystery_set. It is NOT guaranteed
+that the string is an element of the mystery_set. Don't forget to take that into account!
+Don't print anything!
+"""
+# # mystery_set has been defined
+# string = input()
+#
+# # delete string from mystery_set
+# mystery_set.discard(string)
+
+########################################################################################################################
+"""
+Set
+Counting unique
+
+Imagine you have information about subjects three students study. It could be in the following format:
+
+Belov = ["Physics", "Math", "Russian"]
+Smith = ["Math", "Geometry", "English"]
+Sarada = ["Japanese", "Math", "Physics"]
+
+The subjects can be the same or different. Your task is to find the number of unique subjects. For example, in the lists
+above we have 6 different subjects: Physics, Math, Russian, Geometry, English, and Japanese, so you should print 6 as 
+the answer.
+
+In this task, you're given the variables to work with: Belov, Smith, and Sarada.
+"""
+# Belov = ["Physics", "Math", "Russian"]
+# Smith = ["Math", "Geometry", "English"]
+# Sarada = ["Japanese", "Math", "Physics"]
+#
+# print(len(set(Belov + Smith + Sarada)))
+
+########################################################################################################################
+"""
+Set
+Memory test
+Today you are assisting in a psychological experiment. To test short-term memory, a researcher gives a set of numbers 
+to each volunteer and asks to repeat all of them. The order does not matter and repeats are allowed.
+The input has been read into two variables for you.
+If the volunteer remembers all numbers correctly, print True, otherwise, you should output False.
+"""
+# numbers = input().split()
+# answers = input().split()
+# print(set(answers) == set(numbers))
 
 ########################################################################################################################
 """
