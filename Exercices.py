@@ -4518,6 +4518,219 @@ X   Only methods can accept a bunch of sets at once, in a certain way
 
 ########################################################################################################################
 """
+How to choose a collection to use
+Dictionary and Slicing
+
+Assume you have a dictionary of children's names and toys that belong to them.
+
+names_toys = {"Tom": "car", "Suzy": "teddy bear", "Sam": "boat", "Lucy": "ball"}
+
+You want to know the first two entries of this dictionary ({"Tom": "car", "Suzy": "teddy bear"}). To do so, you must 
+slice the dictionary. Is this correct?
+
+    Yes
+X   No
+    Depends on which Python version I'm using
+"""
+
+########################################################################################################################
+"""
+How to choose a collection to use
+RGB colours
+
+According to the RGB model, red, green, and blue can be added together in various ways to create different colors. 
+Assume you have a list of the following colors and their corresponding RGB values:
+	        R 	    G 	    B
+Purple 	    160 	32 	    255
+Light Blue 	80 	    208 	255
+Yellow 	    255 	224 	32
+
+Write a program that takes the name of one of these colors as input and returns its appropriate RGB values. 
+
+Sample Input 1:
+Purple
+
+Sample Output 1:
+(160, 32, 255)
+"""
+# color = input()
+# colors = {"purple": (160, 32, 255), "light blue": (80, 208, 255), "yellow": (255, 224, 32)}
+# print(colors[color])
+
+########################################################################################################################
+"""
+How to choose a collection to use
+Storage type
+
+Match collections and storage types.
+Report a typo
+Match the items from left and right columns
+List        row/column
+Set         row
+Dictionary  key-value
+
+Solution
+List        row/column
+Set         row
+Dictionary  key-value
+"""
+
+########################################################################################################################
+"""
+How to choose a collection to use
+Immutability
+
+What collection isn't mutable?
+Report a typo
+Select one option from the list
+list
+tuple
+dictionary
+set
+
+Solution
+    list
+X   tuple
+    dictionary
+    set
+"""
+
+########################################################################################################################
+"""
+How to choose a collection to use
+Duplicates
+
+Select one or more options from the list
+Tuples
+Sets
+Dictionary keys
+Dictionary values
+Lists
+
+Solution
+    Tuples
+X   Sets
+X   Dictionary keys
+    Dictionary values
+    Lists
+"""
+
+########################################################################################################################
+"""
+How to choose a collection to use
+Grocery shopping
+
+Every Sunday Jane goes to a local market to buy groceries for the upcoming week. When she makes her shopping list, she 
+never puts everything down at once: she keeps track of what she wants to buy during the day. On Sunday morning her list 
+looked like this:
+
+to_buy = ['carrots', 'carrots', 'bread', 'tomatoes', 'onions', 'apples', 'tomatoes', 'carrots', 
+          'tomatoes', 'onions', 'onions', 'onions', 'bread', 'milk', 'bread', 'apples']
+
+Write a program that prints what she wants to buy and how many times she has added it to her shopping list, like in the 
+example. The order of the items should be preserved.
+Report a typo
+
+Sample Input 1:
+
+carrots carrots bread tomatoes onions apples tomatoes carrots tomatoes onions onions onions bread milk bread apples
+
+Sample Output 1:
+
+3 carrots
+3 bread
+3 tomatoes
+4 onions
+2 apples
+1 milk
+"""
+# shopping_list = input().split()
+# to_buy = {}
+#
+# for item in shopping_list:
+#     to_buy.update({item: shopping_list.count(item)})
+#
+# for item, nb_item in to_buy.items():
+#     print(nb_item, item)
+
+########################################################################################################################
+"""
+How to choose a collection to use
+Seasons
+
+You were asked to create a stacked tuple called months (a so-called "tuple of tuples") with the names of months. Each 
+tuple contains months belonging to the corresponding season of the year starting with winter months:
+
+months = (('December', 'January', 'February'), 
+          ('March', 'April', 'May'), 
+          ('June', 'July', 'August'),
+          ('September', 'October', 'November'))
+
+The months tuple is already defined in this task, you don't need to create it.
+
+You will get 3 successive months of the year in the input. Your task is to read the input, create a tuple of input 
+months and check if it is in the months tuple. If it is so, print True, otherwise, False.
+Report a typo
+
+Sample Input 1:
+
+December January February
+
+Sample Output 1:
+
+True
+"""
+# months = (('December', 'January', 'February'),
+#           ('March', 'April', 'May'),
+#           ('June', 'July', 'August'),
+#           ('September', 'October', 'November'))
+#
+# three_months = input().split()
+# print(tuple(three_months) in months)
+
+########################################################################################################################
+"""
+How to choose a collection to use
+Fill in the gap
+
+Fill in the gap in the following statement:
+Only _________ are unordered in Python 3.7.
+Solution
+Sets
+"""
+
+########################################################################################################################
+"""
+How to choose a collection to use
+Matching
+
+List        Store guests' names for a party (it is updated constantly).
+Tuple       Check student's attendance (it is immutable).
+Dictionary  For each employee, store their name and age, accessed by their ID.
+Set         For a group of people, write down in what months they have their birthdays. You are not interested how many 
+of them have a birthday in a particular month.
+
+"""
+
+########################################################################################################################
+"""
+How to choose a collection to use
+Remove duplicates
+
+Suppose you have a list of names. Write a program that takes this list as an input, removes all duplicate names, and 
+returns them in alphabetical order.
+
+To return the names in alphabetical or numerical order, you can use the following built-in methods: list_name.sort() for
+lists and sorted(variable_name) for sets, tuples or lists. The difference between these two methods is that sort() 
+modifies the original list, and sorted() creates a sorted copy of a collection.
+"""
+names = input().split()
+for name in sorted(set(names)):
+    print(name)
+
+
+########################################################################################################################
+"""
 Work on project. Stage 1/4 Mini-calculator
 Mini-calculator
 
